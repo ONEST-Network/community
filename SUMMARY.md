@@ -3,7 +3,7 @@
 ## Learn
 
 * [Introduction](README.md)
-* [ONEST Network Documentation](learn/onest-network-documentation.md)
+* [ONEST Network Documentation](<README (1).md>)
 * [ONEST- Focus Areas](learn/onest-focus-areas.md)
 * [Benefits of Joining the Network](learn/benefits-of-joining-the-network.md)
 * [Core Principles](learn/core-principles.md)
@@ -11,6 +11,7 @@
 * [Roles You Can Play](learn/roles-you-can-play.md)
 * [How to Join?](learn/how-to-join.md)
 * [Imagine Possibilities](learn/imagine-possibilities.md)
+* [Steps for Go Live: Provider Platform](learn/steps-for-go-live-provider-platform.md)
 
 ## Community
 
@@ -21,7 +22,3 @@
 
 * [FAQs](help/faqs.md)
 * [Glossary](help/glossary.md)
-
-***
-
-* [Steps for Go Live: Provider Platform](steps-for-go-live-provider-platform.md)

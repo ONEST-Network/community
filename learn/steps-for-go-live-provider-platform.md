@@ -1,9 +1,10 @@
 # Steps for Go Live: Provider Platform
 
-**Summary:**\
-This document highlights the steps to be followed by a provider platform for technical integration on the ONEST network in order to go live with their offerings. The first cohort within the ONEST network will go live with the discovery stage of the transaction\[1]. Thus, post following the steps highlighted in the document, every provider platform will be able to make their offerings discoverable across seeker platforms present within the ONEST network. For any further steps within a transaction, the consumers will be routed to the respective provider platform.\
-\
-**Pre-reads:**
+### **Summary:**
+
+This document highlights the steps to be followed by a provider platform for technical integration on the ONEST network in order to go live with their offerings. The first cohort within the ONEST network will go live with the discovery stage of the transaction. Discovery, Trust & Transact (Select, Order, Confirm, Fulfill, Post-fulfilment) are the three stages of an end-to-end transaction. Thus, post following the steps highlighted in the document, every provider platform will be able to make their offerings discoverable across seeker platforms present within the ONEST network. For any further steps within a transaction, the consumers will be routed to the respective provider platform.
+
+### **Pre-reads:**
 
 ONEST network is an implementation of the [DSEP protocol](https://github.com/beckn/DSEP-Specification), which is based on the [beckn protocol](https://becknprotocol.io/).
 
@@ -13,7 +14,8 @@ ONEST network is an implementation of the [DSEP protocol](https://github.com/bec
   * [https://dsep.sunbird.org/](https://dsep.sunbird.org/)
   * DSEP Tech Overview Videos: [HERE](https://drive.google.com/drive/folders/18mwSy3u-MSj1FpU7i79e39h0x6ylins7?usp=sharing)
 
-**Steps for technical integration:**\
+### **Steps for technical integration:**
+
 **Step 1:** Identify key use cases and user stories to start with, following an MVP for go-live on the ONEST network
 
 * Example use case: There is an organisation A that creates a diverse range of educational content that is helping simplify K-12 education for students from all backgrounds. They upload this content on their own platform. Another organisation or individual looking for K-12 educational content need to find out about organisation A, visit their platform and search for the content based on the name, grade, subject and so on. But organisation A need more organisations and individuals to make use of this content. Thus, their key use case will be the discovery of educational courses hosted on their platform across all the seeker platforms on the ONEST network.
@@ -75,7 +77,3 @@ Examples to help with the mapping:
 * Codes to be used for generating a pair of private key, public keys:
   * [https://registry.becknprotocol.io/crypto\_keys/generate/ed25519:256](https://registry.becknprotocol.io/crypto\_keys/generate/ed25519:256)
   * [https://registry.becknprotocol.io/crypto\_keys/generate/x25519:256](https://registry.becknprotocol.io/crypto\_keys/generate/x25519:256)
-
-
-
-1. Discovery, Trust & Transact are the three stages of an end-to-end transaction ↑
