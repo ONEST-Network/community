@@ -3,7 +3,7 @@
 ## Learn
 
 * [Introduction](README.md)
-* [ONEST- Overview](learn/onest-overview.md)
+* [ONEST Network Documentation](learn/onest-network-documentation.md)
 * [ONEST- Focus Areas](learn/onest-focus-areas.md)
 * [Benefits of Joining the Network](learn/benefits-of-joining-the-network.md)
 * [Core Principles](learn/core-principles.md)
@@ -21,3 +21,7 @@
 
 * [FAQs](help/faqs.md)
 * [Glossary](help/glossary.md)
+
+***
+
+* [Steps for Go Live: Provider Platform](steps-for-go-live-provider-platform.md)
