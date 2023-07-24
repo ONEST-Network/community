@@ -9,7 +9,6 @@
 * [Core Principles](learn/core-principles.md)
 * [How the network will work?](learn/how-the-network-will-work.md)
 * [Roles You Can Play](learn/roles-you-can-play.md)
-* [How to Join?](learn/how-to-join.md)
 * [Imagine Possibilities](learn/imagine-possibilities.md)
 * [Steps for Go Live: Provider Platform](learn/steps-for-go-live-provider-platform.md)
 
