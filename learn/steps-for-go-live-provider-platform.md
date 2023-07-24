@@ -16,6 +16,8 @@ ONEST network is an implementation of the [DSEP protocol](https://github.com/bec
 
 ### **Steps for technical integration:**
 
+Before you begin, please ensure that you have filled out the "Join Us" form linked [HERE](https://onest.network/join-us) so that a person from our team can be in touch with you to support your integration journey.&#x20;
+
 **Step 1:** Identify key use cases and user stories to start with, following an MVP for go-live on the ONEST network
 
 * Example use case: There is an organisation A that creates a diverse range of educational content that is helping simplify K-12 education for students from all backgrounds. They upload this content on their own platform. Another organisation or individual looking for K-12 educational content need to find out about organisation A, visit their platform and search for the content based on the name, grade, subject and so on. But organisation A need more organisations and individuals to make use of this content. Thus, their key use case will be the discovery of educational courses hosted on their platform across all the seeker platforms on the ONEST network.
