@@ -41,8 +41,6 @@ Examples to help with the mapping:
 
 [https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/scholarships-grants/search](https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/scholarships-grants/search)
 
-* the postman collections for testing with reference apps are here: [https://github.com/beckn/DSEP-Specification/tree/master/artefacts/postman-collections](https://github.com/beckn/DSEP-Specification/tree/master/artefacts/postman-collections)
-
 **Step 5:** Register in the sandbox via the Network Participant form\
 \#Please note that the link to the Network Participant form will be added here shortly
 
