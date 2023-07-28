@@ -35,11 +35,11 @@ Examples to help with the mapping:
 
 * on\_search for courses:
 
-[https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/courses-training/search](https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/courses-training/search)
+{% embed url="https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/courses-training/search" %}
 
 * on\_search for scholarships:
 
-[https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/scholarships-grants/search](https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/scholarships-grants/search)
+{% embed url="https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/scholarships-grants/search" %}
 
 **Step 5:** Register in the sandbox via the Network Participant form\
 \#Please note that the link to the Network Participant form will be added here shortly
@@ -55,6 +55,7 @@ Examples to help with the mapping:
 
 **Step 7:** Test with reference seeker platforms (BAPs) on the sandbox
 
+* The postman collections for testing with reference apps are here: [https://github.com/beckn/DSEP-Specification/tree/master/artefacts/postman-collections](https://github.com/beckn/DSEP-Specification/tree/master/artefacts/postman-collections)
 * Hosted versions of the provider platform (BPP) and Seeker platform (BAP) can be used to test the implementations. Link for the hosted version for a Provider platform (BPP): [https://sandbox-bpp-network.becknprotocol.io](https://sandbox-bpp-network.becknprotocol.io/)
 * Hosted version for a Seeker Application (BAP):[https://ps-bap-network.becknprotocol.io](https://ps-bap-network.becknprotocol.io/)
 * Link to Sandbox: [https://github.com/beckn/beckn-sandbox/blob/feat/readme-file/README.md](https://github.com/beckn/beckn-sandbox/blob/feat/readme-file/README.md)
