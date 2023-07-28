@@ -49,6 +49,7 @@ Examples to help with the mapping:
 **Step 6:** Integrate On\_search API via Postman collection
 
 * API call Samples and discovery protocol documentation: [https://dsep.sunbird.org/discovery-protocol-specifications/discovery-protocol](https://dsep.sunbird.org/discovery-protocol-specifications/discovery-protocol)
+* DSE Specification: [https://github.com/beckn/DSEP-Specification/tree/master/artefacts](https://github.com/beckn/DSEP-Specification/tree/master/artefacts)
 * Reference BPP for training and courses: [https://github.com/Samagra-Development/dsep](https://github.com/Samagra-Development/dsep)
 * If you are facing any issues, please share your query on [https://github.com/orgs/ONEST-Network/discussions](https://github.com/orgs/ONEST-Network/discussions)
 * Beckn Protocol Server is a service that helps the application connect to Beckn Network: Protocol server codebase: [https://github.com/beckn/protocol-server/tree/master](https://github.com/beckn/protocol-server/tree/master)
