@@ -26,7 +26,7 @@ ONEST will enable B2B & B2C discovery and transactions and will help address the
 
 <figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-\
+Read more [_**here**_](https://onest.network/images/PDF/ONEST-Concept-Paper.pdf)_**.**_\
 
 
 \
