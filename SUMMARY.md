@@ -9,6 +9,7 @@
 * [How the network will work?](learn/how-the-network-will-work.md)
 * [Roles You Can Play](learn/roles-you-can-play.md)
 * [Steps for Go Live: Provider Platform](learn/steps-for-go-live-provider-platform.md)
+* [Steps for Go Live: Seeker Platform](learn/steps-for-go-live-seeker-platform.md)
 
 ## Community
 
