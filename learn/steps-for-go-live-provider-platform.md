@@ -55,10 +55,10 @@ Examples to help with the mapping:
 
 **Step 7:** Test with reference seeker platforms (BAPs) on the sandbox
 
-* The postman collections for testing with reference apps are here: [https://github.com/beckn/DSEP-Specification/tree/master/artefacts/postman-collections](https://github.com/beckn/DSEP-Specification/tree/master/artefacts/postman-collections)
+* The postman collections for testing with reference apps are here: [https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/DSEP-PS-sandbox.postman\_collection.json](https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/DSEP-PS-sandbox.postman\_collection.json)
 * Hosted versions of the provider platform (BPP) and Seeker platform (BAP) can be used to test the implementations. Link for the hosted version for a Provider platform (BPP): [https://sandbox-bpp-network.becknprotocol.io](https://sandbox-bpp-network.becknprotocol.io/)
 * Hosted version for a Seeker Application (BAP):[https://ps-bap-network.becknprotocol.io](https://ps-bap-network.becknprotocol.io/)
-* Link to Sandbox: [https://github.com/beckn/beckn-sandbox/blob/feat/readme-file/README.md](https://github.com/beckn/beckn-sandbox/blob/feat/readme-file/README.md)
+* Link to Sandbox: [https://github.com/beckn/beckn-sandbox/tree/main/artefacts](https://github.com/beckn/beckn-sandbox/tree/main/artefacts)
 
 **Step 8:** Demo the end-to-end flow
 
