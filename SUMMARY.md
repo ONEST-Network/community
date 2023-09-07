@@ -14,7 +14,8 @@
 ## Community
 
 * [Discussion Forum](community/discussion-forum.md)
-* [Community Events](community/community-events.md)
+* [Community Events](community/community-events/README.md)
+  * [Win Room](community/community-events/win-room.md)
 
 ## HELP
 
