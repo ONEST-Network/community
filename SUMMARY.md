@@ -10,6 +10,7 @@
 * [Roles You Can Play](learn/roles-you-can-play.md)
 * [Steps for Go Live: Provider Platform](learn/steps-for-go-live-provider-platform.md)
 * [Steps for Go Live: Seeker Platform](learn/steps-for-go-live-seeker-platform.md)
+* [Learning Path](learn/learning-path.md)
 
 ## Community
 
