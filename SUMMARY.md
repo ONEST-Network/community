@@ -14,9 +14,10 @@
 
 ## Community
 
-* [Discussion Forum](community/discussion-forum.md)
 * [Community Events](community/community-events/README.md)
   * [Win Room](community/community-events/win-room.md)
+* [Discussion Forum](https://github.com/orgs/ONEST-Network/discussions)
+* [Discord Community](https://discord.gg/eB7CAmbrrB)
 
 ## HELP
 
