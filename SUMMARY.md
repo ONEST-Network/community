@@ -15,7 +15,8 @@
 ## Community
 
 * [Community Events](community/community-events/README.md)
-  * [Win Room](community/community-events/win-room.md)
+  * [Win Room Zero](community/community-events/win-room-zero.md)
+  * [Win Room One (Coming Soon!)](community/community-events/win-room-one-coming-soon.md)
 * [Discussion Forum](https://github.com/orgs/ONEST-Network/discussions)
 * [Discord Community](https://discord.gg/eB7CAmbrrB)
 
