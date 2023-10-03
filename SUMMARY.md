@@ -12,7 +12,7 @@
 * [Steps for Go Live: Seeker Platform](learn/steps-for-go-live-seeker-platform.md)
 * [Learning Path](learn/learning-path.md)
 * [Sample Usecases](learn/sample-usecases/README.md)
-  * [Learning Experience Sample Usecase](learn/sample-usecases/learning-experience-sample-usecase.md)
+  * [Learning Experience](learn/sample-usecases/learning-experience.md)
 
 ## Community
 
