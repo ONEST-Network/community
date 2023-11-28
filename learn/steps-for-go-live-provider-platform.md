@@ -8,11 +8,10 @@ This document highlights the steps to be followed by a provider platform for tec
 
 ONEST network is an implementation of the [DSEP protocol](https://github.com/beckn/DSEP-Specification), which is based on the [beckn protocol](https://becknprotocol.io/).
 
-* Understand beckn protocol:\
-  [https://developers.becknprotocol.io/docs/introduction/video-overview/](https://developers.becknprotocol.io/docs/introduction/video-overview/)
-* Understand DSEP Protocol:
-  * [https://dsep.sunbird.org/](https://dsep.sunbird.org/)
-  * DSEP Tech Overview Videos: [HERE](https://drive.google.com/drive/folders/18mwSy3u-MSj1FpU7i79e39h0x6ylins7?usp=sharing)
+* Understand Beckn protocol: [https://developers.becknprotocol.io/docs/introduction/video-overview/](https://developers.becknprotocol.io/docs/introduction/video-overview/)&#x20;
+* Understand the DSEP Protocol: [DSEP Tech Overview Videos Playlist](https://drive.google.com/drive/folders/18mwSy3u-MSj1FpU7i79e39h0x6ylins7)
+
+***
 
 ### **Steps for technical integration:**
 
@@ -24,25 +23,20 @@ Before you begin, please ensure that you have filled out the "Join Us" form link
 
 **Step 2:** Understand the APIs and the structures from the specifications and examples
 
-* Examples are available here: [https://github.com/beckn/DSEP-Specification/tree/master/artefacts](https://github.com/beckn/DSEP-Specification/tree/master/artefacts)
+* (Latest) [https://github.com/beckn/DSEP-Specification/tree/draft/examples](https://github.com/beckn/DSEP-Specification/tree/draft/examples)
+* (Published earlier) [https://github.com/beckn/DSEP-Specification/tree/master/artefacts](https://github.com/beckn/DSEP-Specification/tree/master/artefacts)
+
+***
 
 **Step 3:** List down the data points that need to be shared as a response to a search request
 
 * For example: Let’s take the example of the same organisation as highlighted in step 1. If there is a search request for a 9th grade math lesson from a seeker platform on the network. The organisation might want to respond back with the name of the course available with them pertaining to that lesson, the link to the course, an image/ thumbnail visually representing it and the name of the instructor or the organisation.
 
-**Step 4:** Map the data points against the on\_search API call\
-Examples to help with the mapping:
+**Step 4:** Map the data points against the on\_search API call. Examples to help with the mapping are [available here](https://github.com/beckn/DSEP-Specification/tree/draft/examples).
 
-* on\_search for courses:
+***
 
-{% embed url="https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/courses-training/search" %}
-
-* on\_search for scholarships:
-
-{% embed url="https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/scholarships-grants/search" %}
-
-**Step 5:** Register in the sandbox via the Network Participant form\
-\#Please note that the link to the Network Participant form will be added here shortly
+**Step 5:** Register in the sandbox (https://sandbox.onest.network)
 
 **Step 6:** Integrate On\_search API via Postman collection
 
@@ -64,7 +58,7 @@ Examples to help with the mapping:
 
 **​​Step 9:** Implement signatures and validation as per spec.
 
-* Guide to integrating to beckn Gateway:
+* Guide to integrating to Beckn Gateway:
 
 [https://github.com/sanjay95/BECKN-Integration-to-Gateway](https://github.com/sanjay95/BECKN-Integration-to-Gateway)
 
