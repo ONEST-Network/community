@@ -37,8 +37,19 @@ Examples to help with the mapping:
 
 [https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/scholarships-grants/search](https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/scholarships-grants/search)
 
-**Step 5:** Register in the sandbox via the Network Participant form\
-\#Link to Network Participant form to be added
+**Step 5:** Register in the sandbox registry (https://sandbox.onest.network)
+
+Please refer to **Reference Document** -> **Onboarding Document** after logging in to understand the steps for onboarding in the sandbox.
+
+The sandbox registry URL to be used for lookups is [https://sandbox.onest.network/onest/](https://sandbox.onest.network/onest/)&#x20;
+
+<pre data-title="Example registry lookup that returns the BGs in the network"><code><strong>curl --location --request POST 'https://sandbox.onest.network/onest/lookup' \
+</strong>--header 'Content-Type: application/json' \
+--data-raw '{
+    "country": "IND",
+    "type":"BG"
+}'
+</code></pre>
 
 **Step 6:** Integrate search API via Postman collection
 
@@ -58,10 +69,6 @@ Examples to help with the mapping:
 **Step 8:** Demo the end-to-end flow
 
 **​​Step 9:** Implement signatures and validation as per spec.
-
-* Guide to integrating to beckn Gateway:
-
-[https://github.com/sanjay95/BECKN-Integration-to-Gateway](https://github.com/sanjay95/BECKN-Integration-to-Gateway)
 
 * sample code on generation of keys, signing and verification:
 
