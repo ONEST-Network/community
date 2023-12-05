@@ -13,6 +13,8 @@
 * [Learning Path](learn/learning-path.md)
 * [Sample Usecases](learn/sample-usecases/README.md)
   * [Learning Experience](learn/sample-usecases/learning-experience.md)
+* [Integration of Open Source Adaptors](learn/integration-of-open-source-adaptors/README.md)
+  * [Beckn Protocol Server](learn/integration-of-open-source-adaptors/beckn-protocol-server.md)
 
 ## Community
 
