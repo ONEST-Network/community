@@ -61,9 +61,10 @@ The sandbox registry URL to be used for lookups is [https://sandbox.onest.networ
 
 **Step 7:** Test with reference BPPs (provider platforms) on the sandbox
 
-* The postman collections for testing with reference apps are here: [https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/DSEP-PS-sandbox.postman\_collection.json](https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/DSEP-PS-sandbox.postman\_collection.json)
-* Hosted versions of the provider platform (BPP) and seeker platform (BAP) can be used to test the implementations. Link for the hosted version for a provider platform (BPP): [https://sandbox-bpp-network.becknprotocol.io](https://sandbox-bpp-network.becknprotocol.io/)
-* Hosted version for a seeker platform (BAP):[https://ps-bap-network.becknprotocol.io](https://ps-bap-network.becknprotocol.io/)
+* The postman collections for testing with reference apps are here: [https://raw.githubusercontent.com/beckn/DSEP-Specification/draft/examples/postman-collection/sandbox-sample-collection.json](https://raw.githubusercontent.com/beckn/DSEP-Specification/draft/examples/postman-collection/sandbox-sample-collection.json)
+* Hosted versions of the provider platform (BPP) and Seeker platform (BAP) can be used to test the implementations. Please find the links below:
+  * Provider platform (BPP): [https://fs-ps-bpp-network.onest.network/](https://fs-ps-bap-network.onest.network/)
+  * Seeker Application (BAP): [https://fs-ps-bap-network.onest.network/](https://fs-ps-bap-network.onest.network/)
 * Link to Sandbox: [https://github.com/beckn/beckn-sandbox/tree/main/artefacts](https://github.com/beckn/beckn-sandbox/tree/main/artefacts)
 
 **Step 8:** Demo the end-to-end flow
