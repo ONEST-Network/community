@@ -7,8 +7,11 @@ This document highlights the steps to be followed by a seeker platform for techn
 
 ONEST network is an implementation of the [DSEP protocol](https://github.com/beckn/DSEP-Specification), which is based on the [beckn protocol](https://becknprotocol.io/).
 
-* Understand beckn protocol:\
-  [https://developers.becknprotocol.io/docs/introduction/video-overview/](https://developers.becknprotocol.io/docs/introduction/video-overview/)
+* Beckn Protocol APIs Specifiction: [https://developers.becknprotocol.io/docs/core-specification/core-apis/](https://developers.becknprotocol.io/docs/core-specification/core-apis/)
+*   Beckn Registry Documentation:
+
+    [https://beckn-registry.readthedocs.io/en/latest/index.html](https://beckn-registry.readthedocs.io/en/latest/index.html)
+* Understand Beckn protocol: [https://developers.becknprotocol.io/docs/introduction/video-overview/](https://developers.becknprotocol.io/docs/introduction/video-overview/)&#x20;
 * Understand DSEP Protocol:
   * [https://dsep.sunbird.org/](https://dsep.sunbird.org/)
   * DSEP Tech Overview Videos: [HERE](https://drive.google.com/drive/folders/18mwSy3u-MSj1FpU7i79e39h0x6ylins7?usp=sharing)
@@ -37,11 +40,16 @@ Examples to help with the mapping:
 
 [https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/scholarships-grants/search](https://github.com/beckn/DSEP-Specification/tree/master/artefacts/beckn%20specifications/scholarships-grants/search)
 
-**Step 5:** Register in the sandbox registry (https://sandbox.onest.network)
+**Step 5:** [Register](https://sandbox.onest.network) in the sandbox registry
 
 Please refer to **Reference Document** -> **Onboarding Document** after logging in to understand the steps for onboarding in the sandbox.
 
-The sandbox registry URL to be used for lookups is [https://sandbox.onest.network/onest/](https://sandbox.onest.network/onest/)&#x20;
+Codes to be used for generating a pair of private key, public keys:
+
+* [https://registry.becknprotocol.io/crypto\_keys/generate/ed25519:256](https://registry.becknprotocol.io/crypto\_keys/generate/ed25519:256)
+* [https://registry.becknprotocol.io/crypto\_keys/generate/x25519:256](https://registry.becknprotocol.io/crypto\_keys/generate/x25519:256)
+
+Below lookup API can be used to search all the participants in the registry. In request body, `type` can be `BGBAP`, `BPP`,&#x20;
 
 <pre data-title="Example registry lookup that returns the BGs in the network"><code><strong>curl --location --request POST 'https://sandbox.onest.network/onest/lookup' \
 </strong>--header 'Content-Type: application/json' \
@@ -51,13 +59,15 @@ The sandbox registry URL to be used for lookups is [https://sandbox.onest.networ
 }'
 </code></pre>
 
-**Step 6:** Integrate search API via Postman collection
+**Step 6:** Integrate On\_search API via Postman collection
 
 * API call Samples and discovery protocol documentation: [https://dsep.sunbird.org/discovery-protocol-specifications/discovery-protocol](https://dsep.sunbird.org/discovery-protocol-specifications/discovery-protocol)
-* Open Source Beckn Adaptor (Protocol Server) [https://github.com/beckn/protocol-server](https://github.com/beckn/protocol-server)
-* If you are facing any issues, please share your query on [https://github.com/orgs/ONEST-Network/discussions](https://github.com/orgs/ONEST-Network/discussions)
-* Beckn Protocol Server is a service that helps the application connect to Beckn Network: Protocol server codebase: [https://github.com/beckn/protocol-server/tree/master](https://github.com/beckn/protocol-server/tree/master)
-* Documentation on protocol server: [https://github.com/beckn/protocol-server/wiki](https://github.com/beckn/protocol-server/wiki)
+* Beckn Protocol Server is a service that helps the application connect to ONEST Network. It follows the [Beckn Protocol](https://beckn.network/protocol) and makes it more accessible for the applications to get started with ONEST implementation. Any network participant can run this server and connect to ONEST Network: [beckn-protocol-server.md](integration-of-open-source-adaptors/beckn-protocol-server.md "mention")
+*   Implement signatures and validation as per spec.
+
+    * sample code on generation of keys, signing and verification:
+
+    [https://github.com/beckn-on-succinct/beckn-sdk-java/blob/master/src/test/java/in/succinct/beckn/SampleUseCase.java](https://github.com/beckn-on-succinct/beckn-sdk-java/blob/master/src/test/java/in/succinct/beckn/SampleUseCase.java)
 
 **Step 7:** Test with reference BPPs (provider platforms) on the sandbox
 
@@ -69,20 +79,6 @@ The sandbox registry URL to be used for lookups is [https://sandbox.onest.networ
 
 **Step 8:** Demo the end-to-end flow
 
-**​​Step 9:** Implement signatures and validation as per spec.
-
-* sample code on generation of keys, signing and verification:
-
-[https://github.com/beckn-on-succinct/beckn-sdk-java/blob/master/src/test/java/in/succinct/beckn/SampleUseCase.java](https://github.com/beckn-on-succinct/beckn-sdk-java/blob/master/src/test/java/in/succinct/beckn/SampleUseCase.java)
-
-* Beckn Registry Documentation:
-
-[https://beckn-registry.readthedocs.io/en/latest/index.html](https://beckn-registry.readthedocs.io/en/latest/index.html)
-
-* Codes to be used for generating a pair of private key, public keys:
-
-[https://registry.becknprotocol.io/crypto\_keys/generate/ed25519:256](https://registry.becknprotocol.io/crypto\_keys/generate/ed25519:256)
-
-[https://registry.becknprotocol.io/crypto\_keys/generate/x25519:256](https://registry.becknprotocol.io/crypto\_keys/generate/x25519:256)
-
 1. Discovery, Trust & Transact are the three stages of an end-to-end transaction ↑
+
+**Support:** If you are facing any issues, please share your query on [https://github.com/orgs/ONEST-Network/discussions](https://github.com/orgs/ONEST-Network/discussions)
