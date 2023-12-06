@@ -8,7 +8,7 @@ Here's a list of pre-reads to start with
 
 1. Experience some of the possibilities of Open Networks [https://experience-guide.becknprotocol.io/select-experience](https://experience-guide.becknprotocol.io/select-experience)
 2. Technical Overview [Playlist](https://drive.google.com/drive/folders/18mwSy3u-MSj1FpU7i79e39h0x6ylins7?usp=drive\_link)
-3. Open Source Beckn Adaptor (FIDE's Protocol Server) [https://github.com/beckn/protocol-server](https://github.com/beckn/protocol-server)
+3. Open Source Beckn Adaptor (FIDE's Protocol Server) [beckn-protocol-server.md](integration-of-open-source-adaptors/beckn-protocol-server.md "mention")
 4. ONEST Community Sandbox: [https://sandbox.onest.network](https://sandbox.onest.network)
 5. Specifications [https://github.com/beckn/DSEP-Specification](https://github.com/beckn/DSEP-Specification). Check out the latest draft (v0.7) at [https://github.com/beckn/DSEP-Specification/tree/draft](https://github.com/beckn/DSEP-Specification/tree/draft)
 6. Sample JSONs [https://github.com/beckn/DSEP-Specification/tree/draft](https://github.com/beckn/DSEP-Specification/tree/draft)
