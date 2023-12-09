@@ -46,12 +46,7 @@ Before you begin, please ensure that you have filled out the "Join Us" form link
 
 Please refer to **Reference Document** -> **Onboarding Document** after logging in to understand the steps for onboarding in the sandbox.
 
-Codes to be used for generating a pair of private key, public keys:
-
-* [https://registry.becknprotocol.io/crypto\_keys/generate/ed25519:256](https://registry.becknprotocol.io/crypto\_keys/generate/ed25519:256)
-* [https://registry.becknprotocol.io/crypto\_keys/generate/x25519:256](https://registry.becknprotocol.io/crypto\_keys/generate/x25519:256)
-
-Below lookup API can be used to search all the participants in the registry. In request body, `type` can be `BG``BAP`, `BPP`,&#x20;
+Below lookup API can be used to search all the participants in the registry. In request body, `type` can be `BGBAP`, `BPP`,&#x20;
 
 <pre data-title="Example registry lookup that returns the BGs in the network"><code><strong>curl --location --request POST 'https://sandbox.onest.network/onest/lookup' \
 </strong>--header 'Content-Type: application/json' \
