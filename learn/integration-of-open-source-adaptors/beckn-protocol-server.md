@@ -87,14 +87,10 @@ Please set the user name and password as per requirement in docker-compose.yaml 
 bash setup.sh
 ```
 
-Installation of the Protocol Server consists of installing the necessary dependencies and building the project as the project is written in TypeScript.
+Go to docker\_data directory and run the below command to start redis, rabbit-mq and mongo-db containers.
 
 ```
-npm i
-```
-
-```
-npm run build
+docker-compose up -d
 ```
 
 ### Update Configuration Files which we have copied to home directory
