@@ -36,15 +36,15 @@ There would 2 instances of Protocol Server that is running. One is `Client` faci
 
 ## Installation
 
+* Docker version 20.10 or above
+
+If docker is not used, and you want to set up the services independently, following are the prerequisites:
+
 * Node.js version 16 or above
-* npm version 8 or above
+* NPM version 8 or above
 * MongoDB version 4.4 or above
 * RabbitMQ version 3.8 or above
 * Redis version 6.2 or above
-
-(Optional)
-
-* Docker version 20.10 or above
 
 ### Download
 
