@@ -106,9 +106,10 @@ docker-compose up -d
 
 
 
-    * Subscriber Id: Get using registry lookup API
-    * Subscriber Uri: Get using registry lookup API
+    * Subscriber ID: Get using registry lookup API
+    * Subscriber URI: Get using registry lookup API
     * Unique Key: Get using registry lookup API
+    * Registry URL: `https://sandbox.onest.network/onest`
 *   In the BPP Client and BPP Network codebases, update the `~/default-bpp-client.yml` and `~/default-bpp-network.yml` file with the following values:
 
     * Private Key: Copy the private key of your participant.
@@ -128,9 +129,10 @@ docker-compose up -d
 
 
 
-    * Subscriber Id: Get using registry lookup API
-    * Subscriber Uri: Get using registry lookup API
+    * Subscriber ID: Get using registry lookup API
+    * Subscriber URI: Get using registry lookup API
     * Unique Key: Get using registry lookup API
+    * Registry URL: `https://sandbox.onest.network/onest`
     * WebhookURL: The endpoint URL of your service the hosts protocol APIs like search, on\_search etc.
 
 ### Run
