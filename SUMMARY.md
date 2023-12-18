@@ -11,8 +11,9 @@
 * [Steps for Go Live: Provider Platform](learn/steps-for-go-live-provider-platform.md)
 * [Steps for Go Live: Seeker Platform](learn/steps-for-go-live-seeker-platform.md)
 * [Learning Path](learn/learning-path.md)
-* [Sample Usecases](learn/sample-usecases/README.md)
-  * [Learning Experience](learn/sample-usecases/learning-experience.md)
+* [Reference Implementation Guides](learn/reference-implementation-guides/README.md)
+  * [Learning Experience](learn/reference-implementation-guides/learning-experience.md)
+  * [Work Opportunities](learn/reference-implementation-guides/work-opportunities.md)
 * [Integration of Open Source Adaptors](learn/integration-of-open-source-adaptors/README.md)
   * [Beckn Protocol Server](learn/integration-of-open-source-adaptors/beckn-protocol-server.md)
 
