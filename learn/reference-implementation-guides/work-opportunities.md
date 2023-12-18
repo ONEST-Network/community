@@ -1481,3 +1481,7 @@ The request will contain only minimal details about the job like job name, job d
 }
 
 ```
+
+### Skill Codes
+
+[https://www.ncs.gov.in/Documents/National%20Classification%20of%20Occupations%20\_Vol%20I-%202015.pdf](https://www.ncs.gov.in/Documents/National%20Classification%20of%20Occupations%20\_Vol%20I-%202015.pdf)
