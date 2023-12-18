@@ -1,47 +1,30 @@
-# Learning Experience Sample Usecase
+# Learning Experience
 
 ### Usecase:&#x20;
 
-Infosys springboard (Provider Platform) creates a diverse range of educational content that is helping simplify education for seekers from all backgrounds. They upload this content on their own platform. Namma Yatri (Seeker Platform) looking for educational content need to find out about Infosys springboard, visit their platform and search for the content based on the name, grade, subject and so on. Outcome is an end-to-end transaction from discovery to post fulfilment.
+A provider platform which acts as BPP hosts the courses and a seeker platform which acts as BAP helps the people to find courses.
 
-### UI Flow and API Mapping:
+### Flow Diagram:
 
-Following is the breakdown of UI steps and APIs used in each step:
+<figure><img src="../../.gitbook/assets/learning experience -2 (1).jpeg" alt=""><figcaption></figcaption></figure>
 
-1. The driver sees the “Benefits” menu in the bottom tray of the app.
-   * search API - Request is made with filters like driver language, course name keywords etc.
-   * on\_search API - Response with list of course providers and courses will be received.
-2. He selects “Benefits” and can see various options on the page. This page has a section for Insurance and other benefits at the top, followed by the “Learn More - Earn More” section with different courses under it for her/him to select. (Purple Ride, Customer Centric, Safety, etc.)
-3. The driver selects a particular course.&#x20;
-   * select API - Request is made with selected course ID.
-4. Based on the selected course, he gets a list of resources (videos, quizzes, etc.) in the ToC of the course from Springboard through the network.&#x20;
-   * on\_select API - Response with complete course details (images, video URLs etc) will be received.
-5. He selects the resource (video or quiz) that he would like to play. The relevant resource is highlighted for him/her to play.
-   * confirm API - Request is made with user and course details to confirm the course subscription.
-6. The selected video will open in the embedded video player on the Namma Yatri app.
-   * on\_confirm API - Response with course subscription confirmation details.
-7. The next resource (video or quiz) will continue to autoplay.
-8. On successful completion of a curated playlist for the particular category, he gets a badge on his profile on the Namma Yatri app that shows his achievement.
-   * update API - Request to update the course completed status.
-   * on\_update API - Response with completion status, user gets completion certificate.
+### API Mapping and Sample JSON's:
 
-### Sample JSON Schemas:
+1. BAP will make search request with an intent, ex: course name, course provider etc.
 
-#### search API:
+#### Search API (Search By Course Name)
 
 ```json
 {
   "context": {
-    "domain": "onest:learning-experience",
+    "domain": "onest:learning-experiences",
     "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
-    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+    "message_id": "$bb579fb8-cb82-4824-be12-fcbc405b6608",
     "action": "search",
     "timestamp": "2022-12-15T05:23:03.443Z",
     "version": "1.1.0",
-    "bap_uri": "https://nammayatri.io",
-    "bap_id": "nammayatri.io",
-    "bpp_uri": "https://infosys.springboard.io",
-    "bpp_id": "infosys.springboard.io",
+    "bap_uri": "https://sample.bap.io/",
+    "bap_id": "sample.bap.io",
     "ttl": "PT10M"
   },
   "message": {
@@ -56,22 +39,26 @@ Following is the breakdown of UI steps and APIs used in each step:
 }
 ```
 
-#### on\_search API:
+2. BPP will create a catalogue of courses with matching criteria and sends it in on\_search request.
+
+#### On Search API&#x20;
+
+The request will contain only minimal details about the job like course name, description, images, preview, price, ratings etc.
 
 ```json
 {
   "context": {
-    "domain": "onest:learning-experience",
-    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
-    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
-    "action": "on_search",
-    "timestamp": "2022-12-15T05:23:03.443Z",
+    "domain": "onest:learning-experiences",
     "version": "1.1.0",
-    "bap_uri": "https://nammayatri.io",
-    "bap_id": "nammayatri.io",
-    "bpp_uri": "https://infosys.springboard.io",
-    "bpp_id": "infosys.springboard.io",
-    "ttl": "PT10M"
+    "action": "on_search",
+    "bap_uri": "https://sample.bap.io",
+    "bap_id": "sample.bap.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "7db91181-718f-4720-83de-88e36e9f854e",
+    "ttl": "PT10M",
+    "timestamp": "2023-02-22T10:30:18.145Z",
+    "bpp_id": "sample.bpp.io",
+    "bpp_uri": "https://sample.bpp.io"
   },
   "message": {
     "catalog": {
@@ -105,120 +92,132 @@ Following is the breakdown of UI steps and APIs used in each step:
                 "code": "SKILL-DEVELOPMENT-COURSES",
                 "name": "Skill development Courses"
               }
+            },
+            {
+              "id": "TECHNICAL-COURSES",
+              "descriptor": {
+                "code": "TECHNICAL-COURSES",
+                "name": "Technical Courses"
+              }
+            },
+            {
+              "id": "SELF-PACED-COURSES",
+              "descriptor": {
+                "code": "SELF-PACED-COURSES",
+                "name": "Self Paced Courses"
+              }
             }
           ],
           "items": [
             {
               "id": "d4975df5-b18c-4772-80ad-368669856d52",
               "quantity": {
-                "maximum": 1
-              },
+                "maximum": {
+                    "count": 1
+                   }
+               },
               "descriptor": {
                 "name": "Everyday Conversational English",
-                "long_desc": "Everyday Conversational English",
+                "short_desc": "Elevate your daily conversations with confidence through our 'Everyday Conversational English' course.",
+                "long_desc": "<p><strong>Course Overview:</strong><br>Welcome to 'Everyday Conversational English,' your key to mastering essential language skills for real-life communication. Tailored for all levels, this course offers:</p><ol><li><strong>Practical Vocabulary:</strong><br>Learn everyday expressions for seamless communication.</li><li><strong>Interactive Role-Playing:</strong><br>Apply knowledge through immersive exercises for real-world scenarios.</li><li><strong>Cultural Insights:</strong><br>Gain cultural nuances to connect authentically in conversations.</li><li><strong>Real-Life Scenarios:</strong><br>Navigate common situations with confidence-building tools.</li><li><strong>Quiz Assessments:</strong><br>Reinforce learning through quizzes for ongoing skill development.</li></ol><p><strong>Why Take This Course:</strong></p><ul><li><strong>Personal & Professional Growth:</strong><br>Enhance personal connections and gain a professional edge.</li><li><strong>Cultural Fluency:</strong><br>Understand and engage with diverse cultures confidently.</li><li><strong>Life-Long Skill:</strong><br>Develop a valuable skill applicable across various life stages.</li></ul><p>Join 'Everyday Conversational English' and elevate your communication for meaningful connections and success.</p>",
                 "images": [
                   {
                     "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english.png"
                   }
-                ]
-              },
-              "price": {
-                "currency": "INR",
-                "value": "0"
-              },
-              "category_ids": [
-                "LANGUAGE-COURSES"
-              ],
-              "rating": "4.5",
-              "tags": [
-                {
-                  "descriptor": {
-                    "code": "course-info",
-                    "name": "courseInfo"
-                  },
-                  "list": [
-                    {
-                      "descriptor": {
-                        "code": "course-instructor",
-                        "name": "Course Instructor"
-                      },
-                      "value": "Prof. Shipra Vaidya"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "course-provider",
-                        "name": "Course Provider"
-                      },
-                      "value": "Infosys Springboard"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "course-preview",
-                        "name": "Course Preview"
-                      },
-                      "value": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/preview/"
-                    }
-                  ],
-                  "display": true
-                }
-              ],
-              "rateable": true
-            },
-            {
-              "id": "58449592-c4f2-4971-8e23-1da2515042c2",
-              "quantity": {
-                "maximum": 1
-              },
-              "descriptor": {
-                "name": "English Grammar and Usage",
-                "long_desc": "English Grammar and Usage",
-                "images": [
+                ],
+                "media": [
                   {
-                    "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/english-grammar-and-usage.png"
+                    "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/preview/"
                   }
                 ]
               },
+              "creator": {
+                "descriptor": {
+                  "name": "Prof. Emma Sullivan",
+                  "short_desc": "Experienced language educator dedicated to fostering practical conversational skills and cultural fluency",
+                  "long_desc": "Hello, I'm Prof. Emma Sullivan, your guide in 'Everyday Conversational English.' With over a decade of experience, I'm here to make language learning dynamic and culturally enriching. Let's explore practical communication skills together for personal and professional growth. Join me on this exciting journey!",
+                  "images": [
+                    {
+                      "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/ins/1.png"
+                    }
+                  ]
+                }
+              },
               "price": {
                 "currency": "INR",
                 "value": "0"
               },
               "category_ids": [
-                "LANGUAGE-COURSES"
+                "LANGUAGE-COURSES",
+                "SELF-PACED-COURSES"
               ],
-              "rating": "4.2",
+              "rating": "4.5",
+              "rateable": true,
               "tags": [
                 {
                   "descriptor": {
-                    "code": "course-info",
-                    "name": "courseInfo"
+                    "code": "content-metadata",
+                    "name": "Content metadata"
                   },
                   "list": [
                     {
                       "descriptor": {
-                        "code": "course-instructor",
-                        "name": "Course Instructor"
+                        "code": "learner-level",
+                        "name": "Learner level"
                       },
-                      "value": "Prof. Shipra Vaidya"
+                      "value": "Beginner"
                     },
                     {
                       "descriptor": {
-                        "code": "course-provider",
-                        "name": "Course Provider"
+                        "code": "learning-objective",
+                        "name": "Learning objective"
                       },
-                      "value": "Infosys Springboard"
+                      "value": "By the end of the course, learners will confidently navigate everyday conversations, demonstrating improved fluency, cultural awareness, and effective communication skills."
                     },
                     {
                       "descriptor": {
-                        "code": "course-preview",
-                        "name": "Course Preview"
+                        "code": "prerequisite",
+                        "name": "Prerequisite"
                       },
-                      "value": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/english-grammar-and-usage/preview/"
+                      "value": "Should have a basic understanding of English"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "prerequisite",
+                        "name": "Prerequisite"
+                      },
+                      "value": "Access to a computer or internet to access the course online"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "lang-code",
+                        "name": "Language code"
+                      },
+                      "value": "en"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "course-duration",
+                        "name": "Course duration"
+                      },
+                      "value": "P20H"
                     }
                   ],
                   "display": true
                 }
-              ],
-              "rateable": true
+              ]
+            }
+          ],
+          "fulfillments": [
+            {
+              "agent": {
+                "person": {
+                  "name": "Infosys Springboard"
+                },
+                "contact": {
+                  "email": "support@infy.com"
+                }
+              }
             }
           ]
         }
@@ -228,22 +227,24 @@ Following is the breakdown of UI steps and APIs used in each step:
 }
 ```
 
-#### select API:
+3. BAP will receive the on\_search request and displays the list of courses to the user. Once the user chooses a course, BAP will make select API with item ID to get the complete details about the course.
+
+#### Select API
 
 ```json
 {
   "context": {
-    "domain": "onest:learning-experience",
-    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
-    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+    "domain": "onest:learning-experiences",
     "action": "select",
-    "timestamp": "2022-12-15T05:23:03.443Z",
     "version": "1.1.0",
-    "bap_uri": "https://nammayatri.io",
-    "bap_id": "nammayatri.io",
-    "bpp_uri": "https://infosys.springboard.io",
-    "bpp_id": "infosys.springboard.io",
-    "ttl": "PT10M"
+    "bap_uri": "https://sample.bap.io/",
+    "bap_id": "sample.bap.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "$bb579fb8-cb82-4824-be12-fcbc405b6608",
+    "timestamp": "2022-12-12T09:55:41.161Z",
+    "ttl": "PT10M",
+    "bpp_id": "sample.bpp.io",
+    "bpp_uri": "https://sample.bpp.io"
   },
   "message": {
     "order": {
@@ -260,22 +261,24 @@ Following is the breakdown of UI steps and APIs used in each step:
 }
 ```
 
-#### on\_select API:
+4. BPP will receive the select request and check if the course is still valid. If the course is still valid, the BPP will send the on\_select call with complete details of the course.
+
+#### On Select API
 
 ```json
 {
   "context": {
-    "domain": "onest:learning-experience",
-    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
-    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
-    "action": "on_select",
-    "timestamp": "2022-12-15T05:23:03.443Z",
+    "domain": "onest:learning-experiences",
     "version": "1.1.0",
-    "bap_uri": "https://nammayatri.io",
-    "bap_id": "nammayatri.io",
-    "bpp_uri": "https://infosys.springboard.io",
-    "bpp_id": "infosys.springboard.io",
-    "ttl": "PT10M"
+    "action": "on_select",
+    "bap_uri": "https://sample.bap.io/",
+    "bap_id": "sample.bap.io",
+    "bpp_id": "sample.bpp.io",
+    "bpp_uri": "https://sample.bpp.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "d514a38f-e112-4bb8-a3d8-b8e5d8dea82d",
+    "ttl": "PT10M",
+    "timestamp": "2023-02-20T15:21:36.925Z"
   },
   "message": {
     "order": {
@@ -312,6 +315,13 @@ Following is the breakdown of UI steps and APIs used in each step:
               "code": "TECHNICAL-COURSES",
               "name": "Technical Courses"
             }
+          },
+          {
+            "id": "SELF-PACED-COURSES",
+            "descriptor": {
+              "code": "SELF-PACED-COURSES",
+              "name": "Self Paced Courses"
+            }
           }
         ]
       },
@@ -319,145 +329,144 @@ Following is the breakdown of UI steps and APIs used in each step:
         {
           "id": "d4975df5-b18c-4772-80ad-368669856d52",
           "quantity": {
-            "maximum": 1
+            "maximum": {
+                    "count": 1
+                   }
           },
           "descriptor": {
             "name": "Everyday Conversational English",
-            "long_desc": "Everyday Conversational English",
+            "short_desc": "Elevate your daily conversations with confidence through our 'Everyday Conversational English' course.",
+            "long_desc": "<p><strong>Course Overview:</strong><br>Welcome to 'Everyday Conversational English,' your key to mastering essential language skills for real-life communication. Tailored for all levels, this course offers:</p><ol><li><strong>Practical Vocabulary:</strong><br>Learn everyday expressions for seamless communication.</li><li><strong>Interactive Role-Playing:</strong><br>Apply knowledge through immersive exercises for real-world scenarios.</li><li><strong>Cultural Insights:</strong><br>Gain cultural nuances to connect authentically in conversations.</li><li><strong>Real-Life Scenarios:</strong><br>Navigate common situations with confidence-building tools.</li><li><strong>Quiz Assessments:</strong><br>Reinforce learning through quizzes for ongoing skill development.</li></ol><p><strong>Why Take This Course:</strong></p><ul><li><strong>Personal & Professional Growth:</strong><br>Enhance personal connections and gain a professional edge.</li><li><strong>Cultural Fluency:</strong><br>Understand and engage with diverse cultures confidently.</li><li><strong>Life-Long Skill:</strong><br>Develop a valuable skill applicable across various life stages.</li></ul><p>Join 'Everyday Conversational English' and elevate your communication for meaningful connections and success.</p>",
             "images": [
               {
                 "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english.png"
               }
+            ],
+            "media": [
+              {
+                "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/preview/"
+              }
             ]
+          },
+          "creator": {
+            "descriptor": {
+              "name": "Prof. Emma Sullivan",
+              "short_desc": "Experienced language educator dedicated to fostering practical conversational skills and cultural fluency",
+              "long_desc": "Hello, I'm Prof. Emma Sullivan, your guide in 'Everyday Conversational English.' With over a decade of experience, I'm here to make language learning dynamic and culturally enriching. Let's explore practical communication skills together for personal and professional growth. Join me on this exciting journey!",
+              "images": [
+                {
+                  "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/ins/1.png"
+                }
+              ]
+            }
           },
           "price": {
             "currency": "INR",
-            "value": "0"
+            "value": "150"
           },
           "category_ids": [
-            "LANGUAGE-COURSES"
+            "LANGUAGE-COURSES",
+            "SELF-PACED-COURSES"
           ],
           "rating": "4.5",
+          "rateable": true,
           "tags": [
             {
               "descriptor": {
-                "code": "course-info",
-                "name": "courseInfo"
+                "code": "content-metadata",
+                "name": "Content metadata"
               },
               "list": [
                 {
                   "descriptor": {
-                    "code": "course-instructor",
-                    "name": "Course Instructor"
+                    "code": "learner-level",
+                    "name": "Learner level"
                   },
-                  "value": "Prof. Shipra Vaidya"
+                  "value": "Beginner"
                 },
                 {
                   "descriptor": {
-                    "code": "course-provider",
-                    "name": "Course Provider"
+                    "code": "learning-objective",
+                    "name": "Learning objective"
                   },
-                  "value": "Infosys Springboard"
+                  "value": "By the end of the course, learners will confidently navigate everyday conversations, demonstrating improved fluency, cultural awareness, and effective communication skills."
                 },
-                {
-                  "descriptor": {
-                    "code": "course-preview",
-                    "name": "Course Preview"
-                  },
-                  "value": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/preview/"
-                }
-              ],
-              "display": true
-            },
-            {
-              "descriptor": {
-                "code": "course-highlights",
-                "name": "Course Highlights"
-              },
-              "list": [
-                {
-                  "descriptor": {
-                    "code": "highlight",
-                    "name": "highlight-1"
-                  },
-                  "value": "Focusing on clear pronunciation and reducing any strong accents that may impede communication."
-                },
-                {
-                  "descriptor": {
-                    "code": "highlight",
-                    "name": "highlight-2"
-                  },
-                  "value": "Expanding everyday vocabulary to facilitate common conversations."
-                }
-              ],
-              "display": true
-            },
-            {
-              "descriptor": {
-                "code": "course-prerequisites",
-                "name": "Course Prerequisites"
-              },
-              "list": [
                 {
                   "descriptor": {
                     "code": "prerequisite",
-                    "name": "prerequisite-1"
+                    "name": "Prerequisite"
                   },
                   "value": "Should have a basic understanding of English"
                 },
                 {
                   "descriptor": {
                     "code": "prerequisite",
-                    "name": "prerequisite-2"
+                    "name": "Prerequisite"
                   },
                   "value": "Access to a computer or internet to access the course online"
+                },
+                {
+                  "descriptor": {
+                    "code": "lang-code",
+                    "name": "Language code"
+                  },
+                  "value": "en"
+                },
+                {
+                  "descriptor": {
+                    "code": "course-duration",
+                    "name": "Course duration"
+                  },
+                  "value": "P20H"
                 }
               ],
               "display": true
             }
-          ],
-          "rateable": true
+          ]
+        }
+      ],
+      "fulfillments": [
+        {
+          "agent": {
+            "person": {
+              "name": "Infosys Springboard"
+            },
+            "contact": {
+              "email": "support@infy.com"
+            }
+          }
         }
       ],
       "quote": {
         "price": {
           "currency": "INR",
-          "value": "0"
+          "value": "150"
         }
-      },
-      "fulfillments": [
-        {
-          "agent": {
-            "person": {
-              "id": "eng-01-prof",
-              "name": "Prof. Shipra Vaidya"
-            }
-          }
-        }
-      ],
-      "type": "DEFAULT"
+      }
     }
   }
 }
 
 ```
 
-#### confirm API:
+5. BAP sends the customer details to the BPP in init API.
+
+#### Init API
 
 ```json
 {
   "context": {
-    "domain": "onest:learning-experience",
-    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
-    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
-    "action": "confirm",
-    "timestamp": "2022-12-15T05:23:03.443Z",
+    "domain": "onest:learning-experiences",
+    "action": "init",
     "version": "1.1.0",
-    "bap_uri": "https://nammayatri.io",
-    "bap_id": "nammayatri.io",
-    "bpp_uri": "https://infosys.springboard.io",
+    "bap_uri": "https://sample.bap.io/",
+    "bap_id": "sample.bap.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "$bb579fb8-cb82-4824-be12-fcbc405b6608",
+    "timestamp": "2022-12-12T09:55:41.161Z",
+    "ttl": "PT10M",
     "bpp_id": "infosys.springboard.io",
-    "ttl": "PT10M"
+    "bpp_uri": "https://infosys.springboard.io"
   },
   "message": {
     "order": {
@@ -470,37 +479,42 @@ Following is the breakdown of UI steps and APIs used in each step:
         }
       ],
       "billing": {
-        "name": "Namma Yatri",
-        "organization": {
-          "address": "Girija Building, Number 817, Ganapathi Temple Rd",
-          "city": "Bengaluru",
-          "state": "Karnataka",
-          "contact": {
-            "email": "example@gmail.in",
-            "phone": "+91 1234567890"
-          }
-        }
+        "name": "Jane Doe",
+        "phone": "+91-9663088848",
+        "email": "jane.doe@example.com",
+        "address": "No 27, XYZ Lane, etc"
       },
       "fulfillments": [
         {
           "customer": {
             "person": {
-              "name": "Jhon Doe"
+              "name": "Jane Doe",
+              "age": "13",
+              "gender": "female",
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "professional-details",
+                    "name": "Professional Details"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "profession",
+                        "name": "profession"
+                      },
+                      "value": "student"
+                    }
+                  ],
+                  "display": true
+                }
+              ]
             },
             "contact": {
-              "phone": "+91 1234567890",
-              "email": "johndoe@gmail.com"
+              "phone": "+91-9663088848",
+              "email": "jane.doe@example.com"
             }
           }
-        }
-      ],
-      "payments": [
-        {
-          "params": {
-            "amount": "0",
-            "currency": "INR"
-          },
-          "status": "PAID"
         }
       ]
     }
@@ -508,26 +522,27 @@ Following is the breakdown of UI steps and APIs used in each step:
 }
 ```
 
-#### on\_confirm API:
+6. BPP sends the payment URL.
+
+#### On Init API
 
 ```json
 {
   "context": {
-    "domain": "onest:learning-experience",
-    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
-    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
-    "action": "on_confirm",
-    "timestamp": "2022-12-15T05:23:03.443Z",
+    "domain": "onest:learning-experiences",
     "version": "1.1.0",
-    "bap_uri": "https://nammayatri.io",
-    "bap_id": "nammayatri.io",
-    "bpp_uri": "https://infosys.springboard.io",
+    "action": "on_init",
+    "bap_uri": "https://sample.bap.io/",
+    "bap_id": "sample.bap.io",
     "bpp_id": "infosys.springboard.io",
-    "ttl": "PT10M"
+    "bpp_uri": "https://infosys.springboard.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "d514a38f-e112-4bb8-a3d8-b8e5d8dea82d",
+    "ttl": "PT10M",
+    "timestamp": "2023-02-20T15:21:36.925Z"
   },
   "message": {
     "order": {
-      "id": "d4975df5",
       "provider": {
         "id": "INFOSYS",
         "descriptor": {
@@ -539,275 +554,770 @@ Following is the breakdown of UI steps and APIs used in each step:
               "size_type": "sm"
             }
           ]
-        }
+        },
+        "categories": [
+          {
+            "id": "LANGUAGE-COURSES",
+            "descriptor": {
+              "code": "LANGUAGE-COURSES",
+              "name": "Language Courses"
+            }
+          },
+          {
+            "id": "SKILL-DEVELOPMENT-COURSES",
+            "descriptor": {
+              "code": "SKILL-DEVELOPMENT-COURSES",
+              "name": "Skill development Courses"
+            }
+          },
+          {
+            "id": "TECHNICAL-COURSES",
+            "descriptor": {
+              "code": "TECHNICAL-COURSES",
+              "name": "Technical Courses"
+            }
+          },
+          {
+            "id": "SELF-PACED-COURSES",
+            "descriptor": {
+              "code": "SELF-PACED-COURSES",
+              "name": "Self Paced Courses"
+            }
+          }
+        ]
       },
       "items": [
         {
           "id": "d4975df5-b18c-4772-80ad-368669856d52",
           "quantity": {
-            "maximum": 1
+            "maximum": {
+                    "count": 1
+                   }
           },
           "descriptor": {
             "name": "Everyday Conversational English",
-            "long_desc": "Everyday Conversational English",
+            "short_desc": "Elevate your daily conversations with confidence through our 'Everyday Conversational English' course.",
+            "long_desc": "<p><strong>Course Overview:</strong><br>Welcome to 'Everyday Conversational English,' your key to mastering essential language skills for real-life communication. Tailored for all levels, this course offers:</p><ol><li><strong>Practical Vocabulary:</strong><br>Learn everyday expressions for seamless communication.</li><li><strong>Interactive Role-Playing:</strong><br>Apply knowledge through immersive exercises for real-world scenarios.</li><li><strong>Cultural Insights:</strong><br>Gain cultural nuances to connect authentically in conversations.</li><li><strong>Real-Life Scenarios:</strong><br>Navigate common situations with confidence-building tools.</li><li><strong>Quiz Assessments:</strong><br>Reinforce learning through quizzes for ongoing skill development.</li></ol><p><strong>Why Take This Course:</strong></p><ul><li><strong>Personal & Professional Growth:</strong><br>Enhance personal connections and gain a professional edge.</li><li><strong>Cultural Fluency:</strong><br>Understand and engage with diverse cultures confidently.</li><li><strong>Life-Long Skill:</strong><br>Develop a valuable skill applicable across various life stages.</li></ul><p>Join 'Everyday Conversational English' and elevate your communication for meaningful connections and success.</p>",
             "images": [
               {
                 "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english.png"
               }
+            ],
+            "media": [
+              {
+                "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/preview/"
+              }
             ]
+          },
+          "creator": {
+            "descriptor": {
+              "name": "Prof. Emma Sullivan",
+              "short_desc": "Experienced language educator dedicated to fostering practical conversational skills and cultural fluency",
+              "long_desc": "Hello, I'm Prof. Emma Sullivan, your guide in 'Everyday Conversational English.' With over a decade of experience, I'm here to make language learning dynamic and culturally enriching. Let's explore practical communication skills together for personal and professional growth. Join me on this exciting journey!",
+              "images": [
+                {
+                  "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/ins/1.png"
+                }
+              ]
+            }
           },
           "price": {
             "currency": "INR",
-            "value": "0"
+            "value": "150"
           },
           "category_ids": [
-            "LANGUAGE-COURSES"
+            "LANGUAGE-COURSES",
+            "SELF-PACED-COURSES"
           ],
           "rating": "4.5",
+          "rateable": true,
           "tags": [
             {
               "descriptor": {
-                "code": "course-info",
-                "name": "courseInfo"
+                "code": "content-metadata",
+                "name": "Content metadata"
               },
               "list": [
                 {
                   "descriptor": {
-                    "code": "course-instructor",
-                    "name": "Course Instructor"
+                    "code": "learner-level",
+                    "name": "Learner level"
                   },
-                  "value": "Prof. Shipra Vaidya"
+                  "value": "Beginner"
                 },
                 {
                   "descriptor": {
-                    "code": "course-provider",
-                    "name": "Course Provider"
+                    "code": "learning-objective",
+                    "name": "Learning objective"
                   },
-                  "value": "Infosys Springboard"
+                  "value": "By the end of the course, learners will confidently navigate everyday conversations, demonstrating improved fluency, cultural awareness, and effective communication skills."
                 },
-                {
-                  "descriptor": {
-                    "code": "course-link",
-                    "name": "Course Link"
-                  },
-                  "value": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/"
-                }
-              ],
-              "display": true
-            },
-            {
-              "descriptor": {
-                "code": "course-highlights",
-                "name": "Course Highlights"
-              },
-              "list": [
-                {
-                  "descriptor": {
-                    "code": "highlight",
-                    "name": "highlight-1"
-                  },
-                  "value": "Focusing on clear pronunciation and reducing any strong accents that may impede communication."
-                },
-                {
-                  "descriptor": {
-                    "code": "highlight",
-                    "name": "highlight-2"
-                  },
-                  "value": "Expanding everyday vocabulary to facilitate common conversations."
-                }
-              ],
-              "display": true
-            },
-            {
-              "descriptor": {
-                "code": "course-prerequisites",
-                "name": "Course Prerequisites"
-              },
-              "list": [
                 {
                   "descriptor": {
                     "code": "prerequisite",
-                    "name": "prerequisite-1"
+                    "name": "Prerequisite"
                   },
                   "value": "Should have a basic understanding of English"
                 },
                 {
                   "descriptor": {
                     "code": "prerequisite",
-                    "name": "prerequisite-2"
+                    "name": "Prerequisite"
                   },
                   "value": "Access to a computer or internet to access the course online"
+                },
+                {
+                  "descriptor": {
+                    "code": "lang-code",
+                    "name": "Language code"
+                  },
+                  "value": "en"
+                },
+                {
+                  "descriptor": {
+                    "code": "course-duration",
+                    "name": "Course duration"
+                  },
+                  "value": "P20H"
                 }
               ],
               "display": true
             }
-          ],
-          "rateable": true
-        },
+          ]
+        }
+      ],
+      "fulfillments": [
         {
-          "id": "c9461edd-628d-46f3-820e-bab42b57d143",
-          "parent_item_id": "d4975df5-b18c-4772-80ad-368669856d52",
-          "descriptor": {
-            "name": "Everyday Conversational English - Chapter 1",
-            "long_desc": "Everyday Conversational English - Chapter 1",
-            "images": [
-              {
-                "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english-ch1.png"
-              }
-            ],
-            "media": {
-              "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english-ch1/"
+          "agent": {
+            "person": {
+              "name": "Infosys Springboard"
+            },
+            "contact": {
+              "email": "support@infy.com"
             }
-          }
-        },
-        {
-          "id": "77223dc6-f6e4-48dd-bf0e-1e43841e651c",
-          "parent_item_id": "d4975df5-b18c-4772-80ad-368669856d52",
-          "descriptor": {
-            "name": "Everyday Conversational English - Chapter 2",
-            "long_desc": "Everyday Conversational English - Chapter 2",
-            "images": [
-              {
-                "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english-ch2.png"
-              }
-            ],
-            "media": {
-              "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english-ch2/"
-            }
-          }
-        },
-        {
-          "id": "eae312ed-5a2a-4b95-bed8-407a832b11b8",
-          "parent_item_id": "d4975df5-b18c-4772-80ad-368669856d52",
-          "descriptor": {
-            "name": "Everyday Conversational English - Chapter 3",
-            "long_desc": "Everyday Conversational English - Chapter 3",
-            "images": [
-              {
-                "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english-ch3.png"
-              }
-            ],
-            "media": {
-              "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english-ch3/"
+          },
+          "customer": {
+            "person": {
+              "name": "Jane Doe",
+              "age": "13",
+              "gender": "female",
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "professional-details",
+                    "name": "Professional Details"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "profession",
+                        "name": "profession"
+                      },
+                      "value": "student"
+                    }
+                  ],
+                  "display": true
+                }
+              ]
+            },
+            "contact": {
+              "phone": "+91-9663088848",
+              "email": "jane.doe@example.com"
             }
           }
         }
       ],
-      "billing": {
-        "name": "Namma Yatri",
-        "organization": {
-          "address": "Girija Building, Number 817, Ganapathi Temple Rd",
-          "city": "Bengaluru",
-          "state": "Karnataka",
-          "contact": {
-            "email": "example@email.in",
-            "phone": "+91 1234567890"
-          }
-        }
-      },
       "quote": {
         "price": {
           "currency": "INR",
-          "value": "0"
+          "value": "150"
         }
       },
-      "fulfillments": [
-        {
-          "customer": {
-            "person": {
-              "name": "Jhon Doe"
-            },
-            "contact": {
-              "phone": "+91 1234567890",
-              "email": "johndoe@gmail.com"
-            }
-          },
-          "agent": {
-            "person": {
-              "id": "eng-01-prof",
-              "name": "Prof. Shipra Vaidya"
-            }
-          },
-          "state": {
-            "descriptor": {
-              "code": "order-confirmed",
-              "name": "Order Confirmed"
-            }
-          }
-        }
-      ],
+      "billing": {
+        "name": "Jane Doe",
+        "phone": "+91-9663088848",
+        "email": "jane.doe@example.com",
+        "address": "No 27, XYZ Lane, etc"
+      },
       "payments": [
         {
           "params": {
-            "amount": "0",
+            "amount": "150",
             "currency": "INR"
           },
-          "status": "PAID"
+          "url": "https://examplepayments.com/pay",
+          "type": "PRE-ORDER",
+          "status": "NOT-PAID",
+          "collected_by": "bpp"
         }
-      ],
-      "type": "DEFAULT"
+      ]
     }
   }
 }
-
 ```
 
-#### **update API:**
+7. Using the payment URL, BAP redirects the user to the payment gateway and the user completes the payment. BAP will send one more on\_init with payment status.
+   1. If payment is successful, payment.status is PAID.
 
 ```json
 {
   "context": {
-    "domain": "onest:learning-experience",
-    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
-    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
-    "action": "update",
-    "timestamp": "2022-12-15T05:23:03.443Z",
+    "domain": "onest:learning-experiences",
     "version": "1.1.0",
-    "bap_uri": "https://nammayatri.io",
-    "bap_id": "nammayatri.io",
-    "bpp_uri": "https://infosys.springboard.io",
-    "bpp_id": "infosys.springboard.io",
-    "ttl": "PT10M"
+    "action": "on_init",
+    "bap_uri": "https://sample.bap.io/",
+    "bap_id": "sample.bap.io",
+    "bpp_id": "sample.bpp.io",
+    "bpp_uri": "https://sample.bpp.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "d514a38f-e112-4bb8-a3d8-b8e5d8dea82d",
+    "ttl": "PT10M",
+    "timestamp": "2023-02-20T15:21:36.925Z"
   },
   "message": {
     "order": {
-      "fulfillments": [{
-            “state”: { 
-               “descriptor”: { 
-                   “code” : “completed”
-               }
-           }
-      }],
+      "provider": {
+        "id": "INFOSYS",
+        "descriptor": {
+          "name": "Infosys Springboard",
+          "short_desc": "Infosys Springboard Digital literacy program",
+          "images": [
+            {
+              "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/app_logos/landing-new.png",
+              "size_type": "sm"
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "LANGUAGE-COURSES",
+            "descriptor": {
+              "code": "LANGUAGE-COURSES",
+              "name": "Language Courses"
+            }
+          },
+          {
+            "id": "SKILL-DEVELOPMENT-COURSES",
+            "descriptor": {
+              "code": "SKILL-DEVELOPMENT-COURSES",
+              "name": "Skill development Courses"
+            }
+          },
+          {
+            "id": "TECHNICAL-COURSES",
+            "descriptor": {
+              "code": "TECHNICAL-COURSES",
+              "name": "Technical Courses"
+            }
+          },
+          {
+            "id": "SELF-PACED-COURSES",
+            "descriptor": {
+              "code": "SELF-PACED-COURSES",
+              "name": "Self Paced Courses"
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "d4975df5-b18c-4772-80ad-368669856d52",
+          "quantity": {
+            "maximum": {
+                    "count": 1
+                   }
+          },
+          "descriptor": {
+            "name": "Everyday Conversational English",
+            "short_desc": "Elevate your daily conversations with confidence through our 'Everyday Conversational English' course.",
+            "long_desc": "<p><strong>Course Overview:</strong><br>Welcome to 'Everyday Conversational English,' your key to mastering essential language skills for real-life communication. Tailored for all levels, this course offers:</p><ol><li><strong>Practical Vocabulary:</strong><br>Learn everyday expressions for seamless communication.</li><li><strong>Interactive Role-Playing:</strong><br>Apply knowledge through immersive exercises for real-world scenarios.</li><li><strong>Cultural Insights:</strong><br>Gain cultural nuances to connect authentically in conversations.</li><li><strong>Real-Life Scenarios:</strong><br>Navigate common situations with confidence-building tools.</li><li><strong>Quiz Assessments:</strong><br>Reinforce learning through quizzes for ongoing skill development.</li></ol><p><strong>Why Take This Course:</strong></p><ul><li><strong>Personal & Professional Growth:</strong><br>Enhance personal connections and gain a professional edge.</li><li><strong>Cultural Fluency:</strong><br>Understand and engage with diverse cultures confidently.</li><li><strong>Life-Long Skill:</strong><br>Develop a valuable skill applicable across various life stages.</li></ul><p>Join 'Everyday Conversational English' and elevate your communication for meaningful connections and success.</p>",
+            "images": [
+              {
+                "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english.png"
+              }
+            ],
+            "media": [
+              {
+                "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/preview/"
+              }
+            ]
+          },
+          "creator": {
+            "descriptor": {
+              "name": "Prof. Emma Sullivan",
+              "short_desc": "Experienced language educator dedicated to fostering practical conversational skills and cultural fluency",
+              "long_desc": "Hello, I'm Prof. Emma Sullivan, your guide in 'Everyday Conversational English.' With over a decade of experience, I'm here to make language learning dynamic and culturally enriching. Let's explore practical communication skills together for personal and professional growth. Join me on this exciting journey!",
+              "images": [
+                {
+                  "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/ins/1.png"
+                }
+              ]
+            }
+          },
+          "price": {
+            "currency": "INR",
+            "value": "150"
+          },
+          "category_ids": [
+            "LANGUAGE-COURSES",
+            "SELF-PACED-COURSES"
+          ],
+          "rating": "4.5",
+          "rateable": true,
+          "tags": [
+            {
+              "descriptor": {
+                "code": "content-metadata",
+                "name": "Content metadata"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "learner-level",
+                    "name": "Learner level"
+                  },
+                  "value": "Beginner"
+                },
+                {
+                  "descriptor": {
+                    "code": "learning-objective",
+                    "name": "Learning objective"
+                  },
+                  "value": "By the end of the course, learners will confidently navigate everyday conversations, demonstrating improved fluency, cultural awareness, and effective communication skills."
+                },
+                {
+                  "descriptor": {
+                    "code": "prerequisite",
+                    "name": "Prerequisite"
+                  },
+                  "value": "Should have a basic understanding of English"
+                },
+                {
+                  "descriptor": {
+                    "code": "prerequisite",
+                    "name": "Prerequisite"
+                  },
+                  "value": "Access to a computer or internet to access the course online"
+                },
+                {
+                  "descriptor": {
+                    "code": "lang-code",
+                    "name": "Language code"
+                  },
+                  "value": "en"
+                },
+                {
+                  "descriptor": {
+                    "code": "course-duration",
+                    "name": "Course duration"
+                  },
+                  "value": "P20H"
+                }
+              ],
+              "display": true
+            }
+          ]
+        }
+      ],
+      "fulfillments": [
+        {
+          "agent": {
+            "person": {
+              "name": "Infosys Springboard"
+            },
+            "contact": {
+              "email": "support@infy.com"
+            }
+          },
+          "customer": {
+            "person": {
+              "name": "Jane Doe",
+              "age": "13",
+              "gender": "female",
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "professional-details",
+                    "name": "Professional Details"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "profession",
+                        "name": "profession"
+                      },
+                      "value": "student"
+                    }
+                  ],
+                  "display": true
+                }
+              ]
+            },
+            "contact": {
+              "phone": "+91-9663088848",
+              "email": "jane.doe@example.com"
+            }
+          }
+        }
+      ],
+      "quote": {
+        "price": {
+          "currency": "INR",
+          "value": "150"
+        }
+      },
+      "billing": {
+        "name": "Jane Doe",
+        "phone": "+91-9663088848",
+        "email": "jane.doe@example.com",
+        "address": "No 27, XYZ Lane, etc"
+      },
+      "payments": [
+        {
+          "params": {
+            "amount": "150",
+            "currency": "INR"
+          },
+          "url": "https://examplepayments.com/pay",
+          "type": "PRE-ORDER",
+          "status": "PAID",
+          "collected_by": "bpp"
+        }
+      ]
+    }
+  }
+}
+  
+```
+
+&#x20;         2\. If payment is failed, payment.status is NOT-PAID and payment URL will be shared.
+
+```json
+{
+  "context": {
+    "domain": "onest:learning-experiences",
+    "version": "1.1.0",
+    "action": "on_init",
+    "bap_uri": "https://sample.bap.io/",
+    "bap_id": "sample.bap.io",
+    "bpp_id": "sample.bpp.io",
+    "bpp_uri": "https://sample.bpp.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "d514a38f-e112-4bb8-a3d8-b8e5d8dea82d",
+    "ttl": "PT10M",
+    "timestamp": "2023-02-20T15:21:36.925Z"
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "INFOSYS",
+        "descriptor": {
+          "name": "Infosys Springboard",
+          "short_desc": "Infosys Springboard Digital literacy program",
+          "images": [
+            {
+              "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/app_logos/landing-new.png",
+              "size_type": "sm"
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "LANGUAGE-COURSES",
+            "descriptor": {
+              "code": "LANGUAGE-COURSES",
+              "name": "Language Courses"
+            }
+          },
+          {
+            "id": "SKILL-DEVELOPMENT-COURSES",
+            "descriptor": {
+              "code": "SKILL-DEVELOPMENT-COURSES",
+              "name": "Skill development Courses"
+            }
+          },
+          {
+            "id": "TECHNICAL-COURSES",
+            "descriptor": {
+              "code": "TECHNICAL-COURSES",
+              "name": "Technical Courses"
+            }
+          },
+          {
+            "id": "SELF-PACED-COURSES",
+            "descriptor": {
+              "code": "SELF-PACED-COURSES",
+              "name": "Self Paced Courses"
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "d4975df5-b18c-4772-80ad-368669856d52",
+          "quantity": {
+            "maximum": {
+                    "count": 1
+                   }
+          },
+          "descriptor": {
+            "name": "Everyday Conversational English",
+            "short_desc": "Elevate your daily conversations with confidence through our 'Everyday Conversational English' course.",
+            "long_desc": "<p><strong>Course Overview:</strong><br>Welcome to 'Everyday Conversational English,' your key to mastering essential language skills for real-life communication. Tailored for all levels, this course offers:</p><ol><li><strong>Practical Vocabulary:</strong><br>Learn everyday expressions for seamless communication.</li><li><strong>Interactive Role-Playing:</strong><br>Apply knowledge through immersive exercises for real-world scenarios.</li><li><strong>Cultural Insights:</strong><br>Gain cultural nuances to connect authentically in conversations.</li><li><strong>Real-Life Scenarios:</strong><br>Navigate common situations with confidence-building tools.</li><li><strong>Quiz Assessments:</strong><br>Reinforce learning through quizzes for ongoing skill development.</li></ol><p><strong>Why Take This Course:</strong></p><ul><li><strong>Personal & Professional Growth:</strong><br>Enhance personal connections and gain a professional edge.</li><li><strong>Cultural Fluency:</strong><br>Understand and engage with diverse cultures confidently.</li><li><strong>Life-Long Skill:</strong><br>Develop a valuable skill applicable across various life stages.</li></ul><p>Join 'Everyday Conversational English' and elevate your communication for meaningful connections and success.</p>",
+            "images": [
+              {
+                "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english.png"
+              }
+            ],
+            "media": [
+              {
+                "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/preview/"
+              }
+            ]
+          },
+          "creator": {
+            "descriptor": {
+              "name": "Prof. Emma Sullivan",
+              "short_desc": "Experienced language educator dedicated to fostering practical conversational skills and cultural fluency",
+              "long_desc": "Hello, I'm Prof. Emma Sullivan, your guide in 'Everyday Conversational English.' With over a decade of experience, I'm here to make language learning dynamic and culturally enriching. Let's explore practical communication skills together for personal and professional growth. Join me on this exciting journey!",
+              "images": [
+                {
+                  "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/ins/1.png"
+                }
+              ]
+            }
+          },
+          "price": {
+            "currency": "INR",
+            "value": "150"
+          },
+          "category_ids": [
+            "LANGUAGE-COURSES",
+            "SELF-PACED-COURSES"
+          ],
+          "rating": "4.5",
+          "rateable": true,
+          "tags": [
+            {
+              "descriptor": {
+                "code": "content-metadata",
+                "name": "Content metadata"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "learner-level",
+                    "name": "Learner level"
+                  },
+                  "value": "Beginner"
+                },
+                {
+                  "descriptor": {
+                    "code": "learning-objective",
+                    "name": "Learning objective"
+                  },
+                  "value": "By the end of the course, learners will confidently navigate everyday conversations, demonstrating improved fluency, cultural awareness, and effective communication skills."
+                },
+                {
+                  "descriptor": {
+                    "code": "prerequisite",
+                    "name": "Prerequisite"
+                  },
+                  "value": "Should have a basic understanding of English"
+                },
+                {
+                  "descriptor": {
+                    "code": "prerequisite",
+                    "name": "Prerequisite"
+                  },
+                  "value": "Access to a computer or internet to access the course online"
+                },
+                {
+                  "descriptor": {
+                    "code": "lang-code",
+                    "name": "Language code"
+                  },
+                  "value": "en"
+                },
+                {
+                  "descriptor": {
+                    "code": "course-duration",
+                    "name": "Course duration"
+                  },
+                  "value": "P20H"
+                }
+              ],
+              "display": true
+            }
+          ]
+        }
+      ],
+      "fulfillments": [
+        {
+          "agent": {
+            "person": {
+              "name": "Infosys Springboard"
+            },
+            "contact": {
+              "email": "support@infy.com"
+            }
+          },
+          "customer": {
+            "person": {
+              "name": "Jane Doe",
+              "age": "13",
+              "gender": "female",
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "professional-details",
+                    "name": "Professional Details"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "profession",
+                        "name": "profession"
+                      },
+                      "value": "student"
+                    }
+                  ],
+                  "display": true
+                }
+              ]
+            },
+            "contact": {
+              "phone": "+91-9663088848",
+              "email": "jane.doe@example.com"
+            }
+          }
+        }
+      ],
+      "quote": {
+        "price": {
+          "currency": "INR",
+          "value": "150"
+        }
+      },
+      "billing": {
+        "name": "Jane Doe",
+        "phone": "+91-9663088848",
+        "email": "jane.doe@example.com",
+        "address": "No 27, XYZ Lane, etc"
+      },
+      "payments": [
+        {
+          "params": {
+            "amount": "150",
+            "currency": "INR"
+          },
+          "url": "https://examplepayments.com/pay-previous-url",
+          "type": "PRE-ORDER",
+          "status": "NOT-PAID",
+          "collected_by": "bpp"
+        },
+        {
+          "params": {
+            "amount": "150",
+            "currency": "INR"
+          },
+          "url": "https://examplepayments.com/pay-new-url",
+          "type": "PRE-ORDER",
+          "status": "NOT-PAID",
+          "collected_by": "bpp"
+        }
+      ]
+    }
+  }
+}
+```
+
+8. BAP sends confirms request to confirm the course subscription.
+
+#### Confirm API
+
+```json
+{
+  "context": {
+    "domain": "onest:learning-experiences",
+    "action": "confirm",
+    "version": "1.1.0",
+    "bap_uri": "https://sample.bap.io/",
+    "bap_id": "sample.bap.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "$bb579fb8-cb82-4824-be12-fcbc405b6608",
+    "timestamp": "2022-12-12T09:55:41.161Z",
+    "ttl": "PT10M",
+    "bpp_id": "sample.bpp.io",
+    "bpp_uri": "https://sample.bpp.io"
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "INFOSYS"
+      },
       "items": [
         {
           "id": "d4975df5-b18c-4772-80ad-368669856d52"
         }
+      ],
+      "billing": {
+        "name": "Jane Doe",
+        "phone": "+91-9663088848",
+        "email": "jane.doe@example.com",
+        "address": "No 27, XYZ Lane, etc"
+      },
+      "fulfillments": [
+        {
+          "customer": {
+            "person": {
+              "name": "Jane Doe",
+              "age": "13",
+              "gender": "female"
+            },
+            "contact": {
+              "phone": "+91-9663088848",
+              "email": "jane.doe@example.com"
+            }
+          }
+        }
+      ],
+      "payments": [
+        {
+          "params": {
+            "amount": "150",
+            "currency": "INR"
+          },
+          "status": "PAID"
+        }
       ]
     }
   }
 }
 ```
 
-#### **on\_update API:**
+9. BPP sends confirmation of submission of job application.
+
+#### On Confirm API
 
 ```json
 {
   "context": {
-    "domain": "onest:learning-experience",
-    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
-    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
-    "action": "on_update",
-    "timestamp": "2022-12-15T05:23:03.443Z",
+    "domain": "onest:learning-experiences",
     "version": "1.1.0",
-    "bap_uri": "https://nammayatri.io",
-    "bap_id": "nammayatri.io",
-    "bpp_uri": "https://infosys.springboard.io",
-    "bpp_id": "infosys.springboard.io",
-    "ttl": "PT10M"
+    "action": "on_confirm",
+    "bap_uri": "https://sample.bap.io/",
+    "bap_id": "sample.bap.io",
+    "bpp_id": "sample.bpp.io",
+    "bpp_uri": "https://sample.bpp.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "d514a38f-e112-4bb8-a3d8-b8e5d8dea82d",
+    "ttl": "PT10M",
+    "timestamp": "2023-02-20T15:21:36.925Z"
   },
   "message": {
     "order": {
-      "id": "d4975df5",
+      "id": "12424kh",
       "provider": {
         "id": "INFOSYS",
         "descriptor": {
@@ -819,219 +1329,663 @@ Following is the breakdown of UI steps and APIs used in each step:
               "size_type": "sm"
             }
           ]
-        }
+        },
+        "categories": [
+          {
+            "id": "LANGUAGE-COURSES",
+            "descriptor": {
+              "code": "LANGUAGE-COURSES",
+              "name": "Language Courses"
+            }
+          },
+          {
+            "id": "SKILL-DEVELOPMENT-COURSES",
+            "descriptor": {
+              "code": "SKILL-DEVELOPMENT-COURSES",
+              "name": "Skill development Courses"
+            }
+          },
+          {
+            "id": "TECHNICAL-COURSES",
+            "descriptor": {
+              "code": "TECHNICAL-COURSES",
+              "name": "Technical Courses"
+            }
+          },
+          {
+            "id": "SELF-PACED-COURSES",
+            "descriptor": {
+              "code": "SELF-PACED-COURSES",
+              "name": "Self Paced Courses"
+            }
+          }
+        ]
       },
       "items": [
         {
           "id": "d4975df5-b18c-4772-80ad-368669856d52",
           "quantity": {
-            "maximum": 1
+            "maximum": {
+                    "count": 1
+                   }
           },
           "descriptor": {
             "name": "Everyday Conversational English",
-            "long_desc": "Everyday Conversational English",
+            "short_desc": "Elevate your daily conversations with confidence through our 'Everyday Conversational English' course.",
+            "long_desc": "<p><strong>Course Overview:</strong><br>Welcome to 'Everyday Conversational English,' your key to mastering essential language skills for real-life communication. Tailored for all levels, this course offers:</p><ol><li><strong>Practical Vocabulary:</strong><br>Learn everyday expressions for seamless communication.</li><li><strong>Interactive Role-Playing:</strong><br>Apply knowledge through immersive exercises for real-world scenarios.</li><li><strong>Cultural Insights:</strong><br>Gain cultural nuances to connect authentically in conversations.</li><li><strong>Real-Life Scenarios:</strong><br>Navigate common situations with confidence-building tools.</li><li><strong>Quiz Assessments:</strong><br>Reinforce learning through quizzes for ongoing skill development.</li></ol><p><strong>Why Take This Course:</strong></p><ul><li><strong>Personal & Professional Growth:</strong><br>Enhance personal connections and gain a professional edge.</li><li><strong>Cultural Fluency:</strong><br>Understand and engage with diverse cultures confidently.</li><li><strong>Life-Long Skill:</strong><br>Develop a valuable skill applicable across various life stages.</li></ul><p>Join 'Everyday Conversational English' and elevate your communication for meaningful connections and success.</p>",
             "images": [
               {
                 "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english.png"
               }
+            ],
+            "media": [
+              {
+                "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/preview/"
+              }
             ]
+          },
+          "creator": {
+            "descriptor": {
+              "name": "Prof. Emma Sullivan",
+              "short_desc": "Experienced language educator dedicated to fostering practical conversational skills and cultural fluency",
+              "long_desc": "Hello, I'm Prof. Emma Sullivan, your guide in 'Everyday Conversational English.' With over a decade of experience, I'm here to make language learning dynamic and culturally enriching. Let's explore practical communication skills together for personal and professional growth. Join me on this exciting journey!",
+              "images": [
+                {
+                  "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/ins/1.png"
+                }
+              ]
+            }
           },
           "price": {
             "currency": "INR",
-            "value": "0"
+            "value": "150"
           },
           "category_ids": [
-            "LANGUAGE-COURSES"
+            "LANGUAGE-COURSES",
+            "SELF-PACED-COURSES"
           ],
           "rating": "4.5",
+          "rateable": true,
+          "add-ons": [
+            {
+              "id": "course-outline",
+              "descriptor": {
+                "name": "Course Outline",
+                "long_desc": "Outline for the course",
+                "media": [
+                  {
+                    "mimetype": "application/pdf",
+                    "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/outline.pdf"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "prelim-quiz",
+              "descriptor": {
+                "name": "Preliminary Quiz",
+                "long_desc": "Take this preliminary quiz to see if you will benefit from the course!",
+                "media": [
+                  {
+                    "mimetype": "text/html",
+                    "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/prelim-quiz"
+                  }
+                ]
+              }
+            }
+          ],
           "tags": [
             {
               "descriptor": {
-                "code": "course-info",
-                "name": "courseInfo"
+                "code": "content-metadata",
+                "name": "Content metadata"
               },
               "list": [
                 {
                   "descriptor": {
-                    "code": "course-instructor",
-                    "name": "Course Instructor"
+                    "code": "learner-level",
+                    "name": "Learner level"
                   },
-                  "value": "Prof. Shipra Vaidya"
+                  "value": "Beginner"
                 },
                 {
                   "descriptor": {
-                    "code": "course-provider",
-                    "name": "Course Provider"
+                    "code": "learning-objective",
+                    "name": "Learning objective"
                   },
-                  "value": "Infosys Springboard"
+                  "value": "By the end of the course, learners will confidently navigate everyday conversations, demonstrating improved fluency, cultural awareness, and effective communication skills."
                 },
-                {
-                  "descriptor": {
-                    "code": "course-link",
-                    "name": "Course Link"
-                  },
-                  "value": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/"
-                }
-              ],
-              "display": true
-            },
-            {
-              "descriptor": {
-                "code": "course-highlights",
-                "name": "Course Highlights"
-              },
-              "list": [
-                {
-                  "descriptor": {
-                    "code": "highlight",
-                    "name": "highlight-1"
-                  },
-                  "value": "Focusing on clear pronunciation and reducing any strong accents that may impede communication."
-                },
-                {
-                  "descriptor": {
-                    "code": "highlight",
-                    "name": "highlight-2"
-                  },
-                  "value": "Expanding everyday vocabulary to facilitate common conversations."
-                }
-              ],
-              "display": true
-            },
-            {
-              "descriptor": {
-                "code": "course-prerequisites",
-                "name": "Course Prerequisites"
-              },
-              "list": [
                 {
                   "descriptor": {
                     "code": "prerequisite",
-                    "name": "prerequisite-1"
+                    "name": "Prerequisite"
                   },
                   "value": "Should have a basic understanding of English"
                 },
                 {
                   "descriptor": {
                     "code": "prerequisite",
-                    "name": "prerequisite-2"
+                    "name": "Prerequisite"
                   },
                   "value": "Access to a computer or internet to access the course online"
+                },
+                {
+                  "descriptor": {
+                    "code": "lang-code",
+                    "name": "Language code"
+                  },
+                  "value": "en"
+                },
+                {
+                  "descriptor": {
+                    "code": "course-duration",
+                    "name": "Course duration"
+                  },
+                  "value": "P20H"
                 }
               ],
               "display": true
             }
-          ],
-          "rateable": true
-        },
-        {
-          "id": "c9461edd-628d-46f3-820e-bab42b57d143",
-          "parent_item_id": "d4975df5-b18c-4772-80ad-368669856d52",
-          "descriptor": {
-            "name": "Everyday Conversational English - Chapter 1",
-            "long_desc": "Everyday Conversational English - Chapter 1",
-            "images": [
-              {
-                "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english-ch1.png"
-              }
-            ],
-            "media": {
-              "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english-ch1/"
-            }
-          }
-        },
-        {
-          "id": "77223dc6-f6e4-48dd-bf0e-1e43841e651c",
-          "parent_item_id": "d4975df5-b18c-4772-80ad-368669856d52",
-          "descriptor": {
-            "name": "Everyday Conversational English - Chapter 2",
-            "long_desc": "Everyday Conversational English - Chapter 2",
-            "images": [
-              {
-                "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english-ch2.png"
-              }
-            ],
-            "media": {
-              "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english-ch2/"
-            }
-          }
-        },
-        {
-          "id": "eae312ed-5a2a-4b95-bed8-407a832b11b8",
-          "parent_item_id": "d4975df5-b18c-4772-80ad-368669856d52",
-          "descriptor": {
-            "name": "Everyday Conversational English - Chapter 3",
-            "long_desc": "Everyday Conversational English - Chapter 3",
-            "images": [
-              {
-                "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english-ch3.png"
-              }
-            ],
-            "media": {
-              "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english-ch3/"
-            }
-          }
+          ]
         }
       ],
-      "billing": {
-        "name": "Namma Yatri",
-        "organization": {
-          "address": "Girija Building, Number 817, Ganapathi Temple Rd",
-          "city": "Bengaluru",
-          "state": "Karnataka",
-          "contact": {
-            "email": "nammayatri.support@juspay.in",
-            "phone": "+91 80 68501060"
-          }
-        }
-      },
-      "quote": {
-        "price": {
-          "currency": "INR",
-          "value": "0"
-        }
-      },
       "fulfillments": [
         {
-          "customer": {
-            "person": {
-              "name": "Jhon Doe",
-              "creds": {
-                "type": "VerifiableCredential",
-                "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/certificate"
-              }
+          "state": {
+            "descriptor": {
+              "code": "NOT-STARTED",
+              "name": "Not Started"
             },
-            "contact": {
-              "phone": "+91 1234567890",
-              "email": "jhondoe@gmail.com"
-            }
+            "updated_at": "2023-02-06T09:55:41.161Z"
           },
           "agent": {
             "person": {
-              "id": "eng-01-prof",
-              "name": "Prof. Shipra Vaidya"
+              "name": "Infosys Springboard"
+            },
+            "contact": {
+              "email": "support@infy.com"
             }
           },
-          "state": {
-            "descriptor": {
-              "code": "completed",
-              "name": "Status of the course progress"
+          "customer": {
+            "person": {
+              "name": "Jane Doe",
+              "age": "13",
+              "gender": "female"
+            },
+            "contact": {
+              "phone": "+91-9663088848",
+              "email": "jane.doe@example.com"
             }
-          }
+          },
+          "stops": [
+            {
+              "id": "0",
+              "instructions": {
+                "name": "content-video-1",
+                "long_desc": "Description About the Content",
+                "media": [
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "https://embedded-video-player-url/play"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "1",
+              "instructions": {
+                "name": "content-video-2",
+                "long_desc": "Description About the Content",
+                "media": [
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "https://embedded-video-player-url/play"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "2",
+              "instructions": {
+                "name": "content-pdf",
+                "long_desc": "Description About the Content",
+                "media": [
+                  {
+                    "mimetype": "application/pdf",
+                    "url": "https://link-to-the-document/"
+                  }
+                ]
+              }
+            }
+          ],
+          "tags": [
+            {
+              "descriptor": {
+                "code": "course-completion-details",
+                "name": "Content Completion Details"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "course-certificate",
+                    "name": "Course certificate"
+                  },
+                  "value": "https://link-to-certificate"
+                },
+                {
+                  "descriptor": {
+                    "code": "course-badge",
+                    "name": "Course Badge"
+                  },
+                  "value": "https://link-to-badge"
+                }
+              ],
+              "display": true
+            }
+          ]
         }
       ],
+      "quote": {
+        "price": {
+          "currency": "INR",
+          "value": "150"
+        }
+      },
+      "billing": {
+        "name": "Jane Doe",
+        "phone": "+91-9663088848",
+        "email": "jane.doe@example.com",
+        "address": "No 27, XYZ Lane, etc"
+      },
       "payments": [
         {
           "params": {
-            "amount": "0",
+            "amount": "150",
             "currency": "INR"
           },
-          "status": "PAID"
+          "type": "PRE-ORDER",
+          "status": "PAID",
+          "collected_by": "bpp"
         }
-      ],
-      "type": "DEFAULT"
+      ]
     }
   }
 }
 
 ```
+
+10. BAP receives the on\_confirm, which contains the embeddable URLs to the contents. The contents can be videos, pdf etc.
+11. BAP can use the status API to fetch the course status.
+
+#### Status API
+
+```json
+{
+  "context": {
+    "domain": "onest:learning-experiences",
+    "action": "status",
+    "version": "1.1.0",
+    "bap_uri": "https://sample.bap.io/",
+    "bap_id": "sample.bap.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "$bb579fb8-cb82-4824-be12-fcbc405b6608",
+    "timestamp": "2022-12-12T09:55:41.161Z",
+    "ttl": "PT10M",
+    "bpp_id": "sample.bpp.io",
+    "bpp_uri": "https://sample.bpp.io"
+  },
+  "message": {
+    "order": {
+      "id": "12424kh"
+    }
+  }
+}
+```
+
+12. BPP send the on\_status request, with course status and certification details (if course is completed).
+
+#### On Status API
+
+```json
+{
+  "context": {
+    "domain": "onest:learning-experiences",
+    "version": "1.1.0",
+    "action": "on_status",
+    "bap_uri": "https://sample.bap.io/",
+    "bap_id": "sample.bap.io",
+    "bpp_id": "sample.bpp.io",
+    "bpp_uri": "https://sample.bpp.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "d514a38f-e112-4bb8-a3d8-b8e5d8dea82d",
+    "ttl": "PT10M",
+    "timestamp": "2023-02-20T15:21:36.925Z"
+  },
+  "message": {
+    "order": {
+      "id": "12424kh",
+      "provider": {
+        "id": "INFOSYS",
+        "descriptor": {
+          "name": "Infosys Springboard",
+          "short_desc": "Infosys Springboard Digital literacy program",
+          "images": [
+            {
+              "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/app_logos/landing-new.png",
+              "size_type": "sm"
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "LANGUAGE-COURSES",
+            "descriptor": {
+              "code": "LANGUAGE-COURSES",
+              "name": "Language Courses"
+            }
+          },
+          {
+            "id": "SKILL-DEVELOPMENT-COURSES",
+            "descriptor": {
+              "code": "SKILL-DEVELOPMENT-COURSES",
+              "name": "Skill development Courses"
+            }
+          },
+          {
+            "id": "TECHNICAL-COURSES",
+            "descriptor": {
+              "code": "TECHNICAL-COURSES",
+              "name": "Technical Courses"
+            }
+          },
+          {
+            "id": "SELF-PACED-COURSES",
+            "descriptor": {
+              "code": "SELF-PACED-COURSES",
+              "name": "Self Paced Courses"
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "d4975df5-b18c-4772-80ad-368669856d52",
+          "quantity": {
+            "maximum": {
+                    "count": 1
+                   }
+          },
+          "descriptor": {
+            "name": "Everyday Conversational English",
+            "short_desc": "Elevate your daily conversations with confidence through our 'Everyday Conversational English' course.",
+            "long_desc": "<p><strong>Course Overview:</strong><br>Welcome to 'Everyday Conversational English,' your key to mastering essential language skills for real-life communication. Tailored for all levels, this course offers:</p><ol><li><strong>Practical Vocabulary:</strong><br>Learn everyday expressions for seamless communication.</li><li><strong>Interactive Role-Playing:</strong><br>Apply knowledge through immersive exercises for real-world scenarios.</li><li><strong>Cultural Insights:</strong><br>Gain cultural nuances to connect authentically in conversations.</li><li><strong>Real-Life Scenarios:</strong><br>Navigate common situations with confidence-building tools.</li><li><strong>Quiz Assessments:</strong><br>Reinforce learning through quizzes for ongoing skill development.</li></ol><p><strong>Why Take This Course:</strong></p><ul><li><strong>Personal & Professional Growth:</strong><br>Enhance personal connections and gain a professional edge.</li><li><strong>Cultural Fluency:</strong><br>Understand and engage with diverse cultures confidently.</li><li><strong>Life-Long Skill:</strong><br>Develop a valuable skill applicable across various life stages.</li></ul><p>Join 'Everyday Conversational English' and elevate your communication for meaningful connections and success.</p>",
+            "images": [
+              {
+                "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/everyday-conversational-english.png"
+              }
+            ],
+            "media": [
+              {
+                "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/preview/"
+              }
+            ]
+          },
+          "creator": {
+            "descriptor": {
+              "name": "Prof. Emma Sullivan",
+              "short_desc": "Experienced language educator dedicated to fostering practical conversational skills and cultural fluency",
+              "long_desc": "Hello, I'm Prof. Emma Sullivan, your guide in 'Everyday Conversational English.' With over a decade of experience, I'm here to make language learning dynamic and culturally enriching. Let's explore practical communication skills together for personal and professional growth. Join me on this exciting journey!",
+              "images": [
+                {
+                  "url": "https://infyspringboard.onwingspan.com/web/assets/images/infosysheadstart/ins/1.png"
+                }
+              ]
+            }
+          },
+          "price": {
+            "currency": "INR",
+            "value": "150"
+          },
+          "category_ids": [
+            "LANGUAGE-COURSES",
+            "SELF-PACED-COURSES"
+          ],
+          "rating": "4.5",
+          "rateable": true,
+          "add-ons": [
+            {
+              "id": "course-outline",
+              "descriptor": {
+                "name": "Course Outline",
+                "long_desc": "Outline for the course",
+                "media": [
+                  {
+                    "mimetype": "application/pdf",
+                    "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/outline.pdf"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "prelim-quiz",
+              "descriptor": {
+                "name": "Preliminary Quiz",
+                "long_desc": "Take this preliminary quiz to see if you will benefit from the course!",
+                "media": [
+                  {
+                    "mimetype": "text/html",
+                    "url": "https://infyspringboard.onwingspan.com/web/courses/infosysheadstart/everyday-conversational-english/prelim-quiz"
+                  }
+                ]
+              }
+            }
+          ],
+          "tags": [
+            {
+              "descriptor": {
+                "code": "content-metadata",
+                "name": "Content metadata"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "learner-level",
+                    "name": "Learner level"
+                  },
+                  "value": "Beginner"
+                },
+                {
+                  "descriptor": {
+                    "code": "learning-objective",
+                    "name": "Learning objective"
+                  },
+                  "value": "By the end of the course, learners will confidently navigate everyday conversations, demonstrating improved fluency, cultural awareness, and effective communication skills."
+                },
+                {
+                  "descriptor": {
+                    "code": "prerequisite",
+                    "name": "Prerequisite"
+                  },
+                  "value": "Should have a basic understanding of English"
+                },
+                {
+                  "descriptor": {
+                    "code": "prerequisite",
+                    "name": "Prerequisite"
+                  },
+                  "value": "Access to a computer or internet to access the course online"
+                },
+                {
+                  "descriptor": {
+                    "code": "lang-code",
+                    "name": "Language code"
+                  },
+                  "value": "en"
+                },
+                {
+                  "descriptor": {
+                    "code": "course-duration",
+                    "name": "Course duration"
+                  },
+                  "value": "P20H"
+                }
+              ],
+              "display": true
+            }
+          ]
+        }
+      ],
+      "fulfillments": [
+        {
+          "state": {
+            "descriptor": {
+              "code": "COMPLETED",
+              "name": "Completed"
+            },
+            "updated_at": "2023-02-06T09:55:41.161Z"
+          },
+          "agent": {
+            "person": {
+              "name": "Infosys Springboard"
+            },
+            "contact": {
+              "email": "support@infy.com"
+            }
+          },
+          "customer": {
+            "person": {
+              "name": "Jane Doe",
+              "age": "13",
+              "gender": "female",
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "professional-details",
+                    "name": "Professional Details"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "profession",
+                        "name": "profession"
+                      },
+                      "value": "student"
+                    }
+                  ],
+                  "display": true
+                }
+              ]
+            },
+            "contact": {
+              "phone": "+91-9663088848",
+              "email": "jane.doe@example.com"
+            }
+          },
+          "stops": [
+            {
+              "id": "0",
+              "instructions": {
+                "name": "content-video-1",
+                "long_desc": "Description About the Content",
+                "media": [
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "https://embedded-video-player-url/play"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "1",
+              "instructions": {
+                "name": "content-video-2",
+                "long_desc": "Description About the Content",
+                "media": [
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "https://embedded-video-player-url/play"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "2",
+              "instructions": {
+                "name": "content-pdf",
+                "long_desc": "Description About the Content",
+                "media": [
+                  {
+                    "mimetype": "application/pdf",
+                    "url": "https://link-to-the-document/"
+                  }
+                ]
+              }
+            }
+          ],
+          "tags": [
+            {
+              "descriptor": {
+                "code": "course-completion-details",
+                "name": "Content Completion Details"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "course-certificate",
+                    "name": "Course certificate"
+                  },
+                  "value": "https://link-to-certificate"
+                },
+                {
+                  "descriptor": {
+                    "code": "course-badge",
+                    "name": "Course Badge"
+                  },
+                  "value": "https://link-to-badge"
+                }
+              ],
+              "display": true
+            }
+          ]
+        }
+      ],
+      "quote": {
+        "price": {
+          "currency": "INR",
+          "value": "150"
+        }
+      },
+      "billing": {
+        "name": "Jane Doe",
+        "phone": "+91-9663088848",
+        "email": "jane.doe@example.com",
+        "address": "No 27, XYZ Lane, etc"
+      },
+      "payments": [
+        {
+          "params": {
+            "amount": "150",
+            "currency": "INR"
+          },
+          "type": "PRE-ORDER",
+          "status": "PAID",
+          "collected_by": "bpp"
+        }
+      ]
+    }
+  }
+}
+```
+
+### Enums
+
+1. Fulfillment.status values
+
+| code        | name        |
+| ----------- | ----------- |
+| NOT-STARTED | Not Started |
+| IN-PROGRESS | In Progress |
+| COMPLETED   | Completed   |
+| ACTIVE      | Active      |
+| EXPIRED     | Expired     |
+
