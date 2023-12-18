@@ -14,6 +14,7 @@
 * [Reference Implementation Guides](learn/reference-implementation-guides/README.md)
   * [Learning Experience](learn/reference-implementation-guides/learning-experience.md)
   * [Work Opportunities](learn/reference-implementation-guides/work-opportunities.md)
+  * [Financial Support](learn/reference-implementation-guides/financial-support.md)
 * [Integration of Open Source Adaptors](learn/integration-of-open-source-adaptors/README.md)
   * [Beckn Protocol Server](learn/integration-of-open-source-adaptors/beckn-protocol-server.md)
 
