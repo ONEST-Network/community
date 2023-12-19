@@ -1,6 +1,6 @@
 # How the network will work?
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Ever since the dawn of the smartphone era, education, skilling, and jobs have reached the palm of our hands. The last decade has seen a sharp increase in ed-tech platforms offering curated content for various levels of education right from pre-school to advanced degrees.
 

@@ -1,6 +1,6 @@
 # ONEST- Focus Areas
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ONEST will primarily focus on enabling equitable opportunities for education, upskilling & jobs under the following four key categories,
 
