@@ -40,23 +40,7 @@ Before you begin, please ensure that you have filled out the "Join Us" form link
 
 **Step 4:** Map the data points against the on\_search API call. Examples to help with the mapping are [available here](https://github.com/beckn/DSEP-Specification/tree/draft/examples).
 
-***
-
-**Step 5:** [Register](https://sandbox.onest.network) in the sandbox registry
-
-Please refer to **Reference Document** -> **Onboarding Document** after logging in to understand the steps for onboarding in the sandbox.
-
-Below lookup API can be used to search all the participants in the registry. In request body, `type` can be `BGBAP`, `BPP`,&#x20;
-
-<pre data-title="Example registry lookup that returns the BGs in the network"><code><strong>curl --location --request POST 'https://sandbox.onest.network/onest/lookup' \
-</strong>--header 'Content-Type: application/json' \
---data-raw '{
-    "country": "IND",
-    "type":"BG"
-}'
-</code></pre>
-
-**Step 6:** Integrate On\_search API via Postman collection
+**Step 5:** Integrate On\_search API via Postman collection
 
 * API call Samples and discovery protocol documentation: [https://dsep.sunbird.org/discovery-protocol-specifications/discovery-protocol](https://dsep.sunbird.org/discovery-protocol-specifications/discovery-protocol)
 * Beckn Protocol Server is a service that helps the application connect to ONEST Network. It follows the [Beckn Protocol](https://beckn.network/protocol) and makes it more accessible for the applications to get started with ONEST implementation. Any network participant can run this server and connect to ONEST Network: [beckn-protocol-server.md](integration-of-open-source-adaptors/beckn-protocol-server.md "mention")
@@ -66,7 +50,7 @@ Below lookup API can be used to search all the participants in the registry. In 
 
     [https://github.com/beckn-on-succinct/beckn-sdk-java/blob/master/src/test/java/in/succinct/beckn/SampleUseCase.java](https://github.com/beckn-on-succinct/beckn-sdk-java/blob/master/src/test/java/in/succinct/beckn/SampleUseCase.java)
 
-**Step 7:** Test with reference seeker platforms (BAPs) on the sandbox
+**Step 6:** Test with reference seeker platforms (BAPs) on the sandbox
 
 * The postman collections for testing with reference apps are here: [https://raw.githubusercontent.com/beckn/DSEP-Specification/draft/examples/postman-collection/sandbox-sample-collection.json](https://raw.githubusercontent.com/beckn/DSEP-Specification/draft/examples/postman-collection/sandbox-sample-collection.json)
 * Hosted versions of the provider platform (BPP) and Seeker platform (BAP) can be used to test the implementations. Please find the links below:
@@ -74,6 +58,6 @@ Below lookup API can be used to search all the participants in the registry. In 
   * Seeker Application (BAP): [https://fs-ps-bap-network.onest.network/](https://fs-ps-bap-network.onest.network/)
 * Link to Sandbox: [https://github.com/beckn/beckn-sandbox/tree/main/artefacts](https://github.com/beckn/beckn-sandbox/tree/main/artefacts)
 
-**Step 8:** Demo the end-to-end flow
+**Step 7:** Demo the end-to-end flow
 
 **Support:** If you are facing any issues, please share your query on [https://github.com/orgs/ONEST-Network/discussions](https://github.com/orgs/ONEST-Network/discussions)
