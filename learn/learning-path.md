@@ -18,8 +18,3 @@ Community Spaces
 
 1. [Discussion Forum](https://github.com/orgs/ONEST-Network/discussions)
 2. [Discord Invite](https://discord.gg/eB7CAmbrrB)
-
-Beckn Open Collective Sandbox (optional)
-
-* Beckn One [Sandbox user guide](https://docs.google.com/document/d/1GSEj0R-8DP47b8ub1Kf2rJzSmm\_eGAa-HdOm4hYJz78/edit?usp=sharing) (Beck Open Collective community supported)
-* Sandbox Gateway [https://gateway.becknprotocol.io/bg/search](https://gateway.becknprotocol.io/bg/search)
