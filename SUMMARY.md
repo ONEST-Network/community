@@ -9,15 +9,16 @@
   * [How the network will work?](learn/introduction/how-the-network-will-work.md)
   * [Roles You Can Play](learn/introduction/roles-you-can-play.md)
 * [Onboarding](learn/onboarding.md)
+* [Understanding the APIs](learn/understanding-the-apis.md)
 * [Steps for Go Live: Provider Platform](learn/steps-for-go-live-provider-platform.md)
 * [Steps for Go Live: Seeker Platform](learn/steps-for-go-live-seeker-platform.md)
-* [Learning Path](learn/learning-path.md)
 * [Reference Implementation Guides](learn/reference-implementation-guides/README.md)
   * [Learning Experience](learn/reference-implementation-guides/learning-experience.md)
   * [Work Opportunities](learn/reference-implementation-guides/work-opportunities.md)
   * [Financial Support](learn/reference-implementation-guides/financial-support.md)
 * [Integration of Open Source Adaptors](learn/integration-of-open-source-adaptors/README.md)
   * [Beckn Protocol Server](learn/integration-of-open-source-adaptors/beckn-protocol-server.md)
+* [Learning Path](learn/learning-path.md)
 
 ## Community
 
