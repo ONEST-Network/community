@@ -10,6 +10,7 @@
   * [Roles You Can Play](learn/introduction/roles-you-can-play.md)
 * [Onboarding](learn/onboarding.md)
 * [Understanding the APIs](learn/understanding-the-apis.md)
+* [Developing the APIs](learn/developing-the-apis.md)
 * [Steps for Go Live: Provider Platform](learn/steps-for-go-live-provider-platform.md)
 * [Steps for Go Live: Seeker Platform](learn/steps-for-go-live-seeker-platform.md)
 * [Reference Implementation Guides](learn/reference-implementation-guides/README.md)
