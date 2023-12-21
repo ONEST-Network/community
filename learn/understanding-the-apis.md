@@ -16,7 +16,7 @@ layout:
 
 ### Introduction
 
-ONEST Protocol layered architecture is illustrated as shown in the diagram below. The base layer refers to the Beckn Protocol, which is an open source decentralized protocol. Over the base layer, the network extension layer comprises the API contracts customized to the ONEST context, along with other specs that have been adopted in order to facilitate transactions in the network.
+ONEST Protocol layered architecture is illustrated as shown in the diagram below. The base layer refers to the [Beckn Protocol](https://becknprotocol.io/), which is an open source decentralized protocol. Over the base layer, the network extension layer comprises the API contracts customized to the ONEST context, along with other specs that have been adopted in order to facilitate transactions in the network.
 
 <figure><img src="../.gitbook/assets/api-1.png" alt=""><figcaption></figcaption></figure>
 
@@ -48,4 +48,12 @@ Below is the example usage of protocol APIs in ONEST Learning Experiences Domain
 \
 Refer to [reference-implementation-guides](reference-implementation-guides/ "mention")to understand APIs usage in other ONEST domains (Financial Support, Work Opportunities and Expert Connect).
 
-Refer to [API Spec](https://raw.githubusercontent.com/beckn/protocol-specifications/8479762c101c385125cd66ecb907817ed6bdd231/api/transaction/build/transaction.yaml) to understand the schemas.
+### Reference &#x20;
+
+ONEST network is an implementation of the DSEP protocol, which is based on the Beckn protocol.
+
+* Beckn Protocol APIs Specification: [https://developers.becknprotocol.io/docs/core-specification/core-apis/](https://developers.becknprotocol.io/docs/core-specification/core-apis/)
+* Understand Beckn protocol: [https://developers.becknprotocol.io/docs/introduction/video-overview/](https://developers.becknprotocol.io/docs/introduction/video-overview/)&#x20;
+* Understand DSEP Protocol:
+  * [https://dsep.sunbird.org/](https://dsep.sunbird.org/)
+  * DSEP Tech Overview Videos: [HERE](https://drive.google.com/drive/folders/18mwSy3u-MSj1FpU7i79e39h0x6ylins7?usp=sharing)
