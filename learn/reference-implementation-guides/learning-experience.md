@@ -522,7 +522,15 @@ The request will contain only minimal details about the job like course name, de
 }
 ```
 
-6. BPP sends the payment URL.
+6. BPP sends the payment URL and if any additional details of the user are required, an xinput form is sent in on\_init request to collect them.\
+   \
+   If BPP has multiple forms to collect the data, he will make on\_init request with the form number(current index) and total number of forms(max index). BPP should generate the xinput form with transaction id(request.context.transaction\_id). So that the forms can be tagged with a lifecyle.\
+   \
+   BAP should render the xinput form on the UI and collect all the details.\
+   \
+   If there are no required xinput forms, the BAP can confirm the order via /confirm API.\
+   \
+   [Link](https://github.com/beckn/DSEP-Specification/blob/draft/examples/financial-support/forms/scholarship-application-form.html): Example xinput form
 
 #### On Init API
 
@@ -631,6 +639,27 @@ The request will contain only minimal details about the job like course name, de
           ],
           "rating": "4.5",
           "rateable": true,
+          "xinput": {
+            "required": true,
+            "head": {
+                "descriptor": {
+                    "name": "Application Form"
+                },
+                "index": {
+                    "min": 0,
+                    "cur": 0,
+                    "max": 1
+                },
+                "headings": [
+                    "User Details"
+                ]
+            },
+            "form": {
+                "mime_type": "text/html",
+                "url": "https://6vs8xnx5i7.co.in/xinput/formid/a23f2fdfbbb8ac402bfd54f-1",
+                "resubmit": false
+            }
+          },
           "tags": [
             {
               "descriptor": {

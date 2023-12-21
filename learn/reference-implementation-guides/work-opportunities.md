@@ -623,13 +623,15 @@ The request will contain only minimal details about the job like job name, job d
 }
 ```
 
-6. BPP sends the on\_init response with an optional input form to collect additional details&#x20;
-
-If BPP has multiple forms to collect the data, he will make on\_init request with the form number(current index) and total number of forms(max index). BPP should generate the xinput form with transaction id(request.context.transaction\_id). So that the forms can be tagged with a lifecyle.
-
-BAP should render the xinput form on the UI and collect all the details.
-
-If there are no required xinput forms, the BAP can confirm the order via /confirm API.
+6. If BPP want to collect additional details of the user, he will send an xinput form in the on\_init request.\
+   \
+   If BPP has multiple forms to collect the data, he will make on\_init request with the form number(current index) and total number of forms(max index). BPP should generate the xinput form with transaction id(request.context.transaction\_id). So that the forms can be tagged with a lifecyle.\
+   \
+   BAP should render the xinput form on the UI and collect all the details.\
+   \
+   If there are no required xinput forms, the BAP can confirm the order via /confirm API.\
+   \
+   [Link](https://github.com/beckn/DSEP-Specification/blob/draft/examples/financial-support/forms/scholarship-application-form.html) : Example xinput form
 
 #### On Init API
 
@@ -705,13 +707,7 @@ If there are no required xinput forms, the BAP can confirm the order via /confir
             "form": {
                 "mime_type": "text/html",
                 "url": "https://6vs8xnx5i7.jobhub.co.in/loans-kyc/xinput/formid/a23f2fdfbbb8ac402bfd54f-1",
-                "resubmit": false,
-                "auth": {
-                    "descriptor": {
-                        "code": "jwt"
-                    },
-                    "value": "eyJhbGciOiJIUzI.eyJzdWIiOiIxMjM0NTY3O.SflKxwRJSMeKKF2QT4"
-                }
+                "resubmit": false
             }
           },
           "tags": [
