@@ -631,7 +631,7 @@ The request will contain only minimal details about the job like job name, job d
    \
    If there are no required xinput forms, the BAP can confirm the order via /confirm API.\
    \
-   [Link](https://github.com/beckn/DSEP-Specification/blob/draft/examples/financial-support/forms/scholarship-application-form.html) : Example xinput form
+   [Example](https://github.com/beckn/DSEP-Specification/blob/draft/examples/financial-support/forms/scholarship-application-form.html) of xinput form and [recommendations](https://github.com/beckn/protocol-specifications/blob/master/docs/BECKN-007-The-XInput-Schema.md) to create xinput form.
 
 #### On Init API
 
@@ -1899,7 +1899,3 @@ The request will contain only minimal details about the job like job name, job d
 }
 
 ```
-
-### Skill Codes
-
-[https://www.ncs.gov.in/Documents/National%20Classification%20of%20Occupations%20\_Vol%20I-%202015.pdf](https://www.ncs.gov.in/Documents/National%20Classification%20of%20Occupations%20\_Vol%20I-%202015.pdf)

@@ -530,7 +530,7 @@ The request will contain only minimal details about the job like course name, de
    \
    If there are no required xinput forms, the BAP can confirm the order via /confirm API.\
    \
-   [Link](https://github.com/beckn/DSEP-Specification/blob/draft/examples/financial-support/forms/scholarship-application-form.html): Example xinput form
+   [Example](https://github.com/beckn/DSEP-Specification/blob/draft/examples/financial-support/forms/scholarship-application-form.html) of xinput form and [recommendation](https://github.com/beckn/protocol-specifications/blob/master/docs/BECKN-007-The-XInput-Schema.md)s to create xinput form.
 
 #### On Init API
 
