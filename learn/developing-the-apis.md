@@ -84,6 +84,8 @@ BPP should consume the following action APIs and trigger on\_action APIs.
 
 **Note:** [beckn-protocol-server.md](integration-of-open-source-adaptors/beckn-protocol-server.md "mention") is a utility, which helps the participants to quickly develop the protocol APIs. It will help in signing and verification of payload signature, schema validation, sending and receiving requests to Gateway and Participants.
 
+[Sample code](https://github.com/beckn-on-succinct/beckn-sdk-java/blob/master/src/test/java/in/succinct/beckn/SampleUseCase.java) for implementing signature and verification.
+
 ### Registry Lookup API
 
 The registry lookup API can be used to get the details of all the participants in the registry. In request body, `type` can be `BG`,`BAP`, `BPP`
