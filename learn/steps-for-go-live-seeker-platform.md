@@ -55,6 +55,8 @@ Before you begin, please ensure that you have filled out the "Join Us" form link
   * Provider platform (BPP): [https://fs-ps-bpp-network.onest.network/](https://fs-ps-bap-network.onest.network/)
   * Seeker Application (BAP): [https://fs-ps-bap-network.onest.network/](https://fs-ps-bap-network.onest.network/)
 
-**Step 6:** Demo the end-to-end flow
+**Step 6:** Demo the end-to-end flow to ONEST and get sandbox sign-off.
+
+**Step 7:**  Register onto to Production [ONEST Registry](https://prod.onest.network/) and Go Live !!!
 
 **Support:** If you are facing any issues, please share your query on [https://github.com/orgs/ONEST-Network/discussions](https://github.com/orgs/ONEST-Network/discussions)
