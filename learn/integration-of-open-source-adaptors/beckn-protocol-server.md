@@ -45,15 +45,9 @@ As the Protocol Server repository is Public, clone the repository and checkout t
 [Repository Link](https://github.com/beckn/protocol-server)
 
 ```
-git checkout master
-```
-
-```
-cd protocol-server
-```
-
-```
-git clone https://github.com/beckn/protocol-server.git
+1. git clone https://github.com/beckn/protocol-server.git
+2. git checkout master
+3. cd protocol-server
 ```
 
 ### Install
