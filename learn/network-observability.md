@@ -1,0 +1,282 @@
+# Network Observability
+
+### Introduction
+
+Observability on the ONEST network provides the ability to understand and gain insights into the inner workings of the network by observing its behaviour, performance, and state. Observability provides a range of benefits, including but not limited to:
+
+1. Debugging & Troubleshooting: Observability provides the necessary data and insights to identify & diagnose issues, and determine their root causes. This is crucial for resolving bugs, performance bottlenecks, and other operational problems quickly.
+2. Compliance & Auditing: Observability is essential for maintaining compliance with the ONEST protocol, specifications & policies. It provides the necessary data for auditing and reporting purposes.
+3. Data-driven Services: Observability provides data-driven insights that can help ONEST evolve its services to help network and the network participants make informed choices based on real-time and historical data.
+4. Security: Observability helps in detecting and responding to security threats. Unusual patterns or anomalies in data can be indicators of potential security breaches or threats.
+
+The observability infrastructure within ONEST is designed to offer the following key features:
+
+* Process the incoming data: validate for protocol compliance and mask any PII information present in the input data
+* Query the processed data via multiple modes: query API, dashboards (pre-created & ability to create new), and download the ingested data as files from cloud storage
+
+The observability infrastructure and services will be accessible to all network participants, allowing them to harness these resources for various purposes, in accordance with the policies set forth by the ONEST network.
+
+### How to send data to Obsrv
+
+#### Using the Protocol Server
+
+We enhanced the Protocol Server to generate telemetry and send to ONEST Obsrv. Use this&#x20;
+
+[GitHub Repo](https://github.com/pveleneni/protocol-server/tree/telemetry-generation) to get the protocol server code and use it. Add the following configuration in default.yml
+
+file:
+
+```json
+telemetry:
+    enabled: true
+    url: "https://data.onest.network/data/v1/in/onest-network-telemetry"
+    batchSize: 50 # batch size
+    syncInterval: 30 # In minutes
+```
+
+Protocol server will generate the telemetry events and sends in a batch 50 or once in every 30 min to ONEST Obsrv.
+
+#### Using the API (without Protocol Server)
+
+For the NPs not using Beckn Protocol Server, use the following API to send Telemetry to ONEST Obsrv.
+
+**API curl command**
+
+```url
+curl --location 'https://data.onest.network/data/v1/in/onest-network-telemetry' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3A_lOGJkWqLRNJYGyO_RBw6PIohSJxR9m2.vIE8kli9EJ%2FJplbI22GwPb%2BHpclnxoKxZcwEG%2F%2FPYu4' \
+--data '{
+    "data": {
+        "id": "onest-batch-1",
+        "events": [{}]
+    }
+}'
+```
+
+**Note:** Send the telemetry events in a batch size of **50, 100** or send **once in every 30 min**.
+
+**Sample API Payloads**
+
+```
+curl --location 'https://data.onest.network/data/v1/in/onest-network-telemetry' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3A_lOGJkWqLRNJYGyO_RBw6PIohSJxR9m2.vIE8kli9EJ%2FJplbI22GwPb%2BHpclnxoKxZcwEG%2F%2FPYu4' \
+--data '{
+    "data": {
+        "id": "onest-batch-1",
+        "events": [
+            {
+                "eid": "API",
+                "ets": 1704370153123,
+                "ver": "1.0",
+                "mid": "db1211ee-66dc-4b39-b91f-65b94034000c",
+                "context": {
+                    "channel": "le-ps-bap-network.onest.network",
+                    "domain": "onest:learning-experiences",
+                    "pdata": {
+                        "id": "le-ps-bap-network.onest.network",
+                        "uri": "https://le-ps-bap-network.onest.network"
+                    },
+                    "source": {
+                        "id": "le-ps-bap-network.onest.network",
+                        "type": "seeker",
+                        "uri": "https://le-ps-bap-network.onest.network"
+                    },
+                    "target": {
+                        "id": "beckn-protocol-network.21cceducation.com",
+                        "type": "provider",
+                        "uri": "https://beckn-protocol-network.21cceducation.com/"
+                    },
+                    "cdata": [
+                        {
+                            "type": "cityname",
+                            "value": "Bangalore",
+                            "valuetype": "string"
+                        },
+                        {
+                            "type": "citycode",
+                            "value": "std:080",
+                            "valuetype": "string"
+                        },
+                        {
+                            "type": "countryname",
+                            "value": "India",
+                            "valuetype": "string"
+                        },
+                        {
+                            "type": "countrycode",
+                            "value": "IND",
+                            "valuetype": "string"
+                        }
+                    ]
+                },
+                "data": {
+                    "url": "/search",
+                    "method": "POST",
+                    "action": "search",
+                    "transactionid": "d4ae9294-ab00-11ee-9db4-325096b39f47",
+                    "msgid": "d4ae99ec-ab00-11ee-be29-325096b39f47",
+                    "statuscode": "200",
+                    "duration": 52,
+                    "exdata": []
+                }
+            },
+            {
+                "eid": "API",
+                "ets": 1704370153123,
+                "ver": "1.0",
+                "mid": "db1211ee-66dc-4b39-b91f-65b94034000c",
+                "context": {
+                    "channel": "beckn-protocol-network.21cceducation.com",
+                    "domain": "onest:learning-experiences",
+                    "pdata": {
+                        "id": "beckn-protocol-network.21cceducation.com",
+                        "uri": "https://beckn-protocol-network.21cceducation.com"
+                    },
+                    "source": {
+                        "id": "beckn-protocol-network.21cceducation.com",
+                        "type": "provider",
+                        "uri": "https://beckn-protocol-network.21cceducation.com"
+                    },
+                    "target": {
+                        "id": "le-ps-bap-network.onest.network",
+                        "type": "seeker",
+                        "uri": "https://le-ps-bap-network.onest.network"
+                    },
+                    "cdata": []
+                },
+                "data": {
+                    "url": "/on_search",
+                    "method": "POST",
+                    "action": "on_search",
+                    "transactionid": "d4ae9294-ab00-11ee-9db4-325096b39f47",
+                    "msgid": "d4ae99ec-ab00-11ee-be29-325096b39f47",
+                    "statuscode": "200",
+                    "duration": 52,
+                    "exdata": []
+                }
+            }
+        ]
+    }
+}'
+```
+
+### Telemetry Event
+
+```
+{
+  "eid": String, // Required. Unique Event ID
+  "ets": Long, // Required. Epoch timestamp of event (time in milli-seconds. For ex: 1442816723)
+  "ver": String, // Required. Version of the event data structure, currently "1.0"
+  "mid": String, // Required. Unique message ID. Used for deduplication, replay and update indexes
+  "context": { // Required. Context in which the event has occurred.
+    "channel": String, // Required. Channel which has produced the event. Can be seeker or provider id
+    "domain": String, // Required. Domain where the event has occurred.
+                      // For ex: Retail, FinancialAid, PersonalFinance, FinancialReporting, etc.
+    "pdata": { // Required. Producer of the event. 
+      "id": String, // Required. unique id assigned to that producer. 
+      "uri": String // Optional. URI of the producer
+    },
+    "source": { // Optional. Identifier of the source system generating the event
+	"id": String, // Required. unique id assigned to that system. 
+	"type": String, // Required. Type of entity: seeker, provider, gateway
+      "uri": String // Optional. URI of the system
+    },
+    "target": { // Optional. Identifier of the system that is expected to be the target of the event
+	"id": String, // Required. unique id assigned to that system. 
+      "type": String, // Required. Type of entity: seeker, provider, gateway
+      "uri": String // Optional. URI of the system
+    },
+    "cdata": [{ // Optional. Correlation data
+      "type": String, // Required. Used to indicate action that is being correlated
+      "value": String, // Required. The stringified correlation value
+	"valuetype": String // Optional. value datatype(string/int/json etc). Defaults to string
+    }]
+  },
+  "data": {
+  "url": String, // Required. The base URL of the request. For ex: /search
+  "method": String, // Required. request method. GET/POST/PATCH etc
+  "action": String, // Optional. Any specific action id to be sent.
+  "transactionid": String, // Optional. A unique value which persists across all related API calls
+                         // For ex: search through confirm
+  "msgid": String, // Required. A unique value which persists during a request / callback cycle
+  "statuscode": String, // Required. HTTP status code of the response. 200/4xx/3xx/5xx
+  "duration": Integer,  // Required. Response time in milli-seconds
+  "error": { // Optional. Capture error details if the API results in an error
+    "type": String, // Required. Type of the error. For ex: CONTEXT-ERROR, CORE-ERROR
+    "code": String, // Required. Error code specific to the network
+    "msg": String, // Optional. Human readable message describing the error
+    "path": String // Optional. A json path applicable in json schema validation failures
+  },
+  "exdata": [{ // Optional. Send extra data that might be non-indexable/passthrough. 
+                 // For ex: req/res payloads
+    "type": String, // Required. Type of the extra data being passed
+    "value": String, // Required. Stringified value
+    "valuetype": String // Optional. Datatype of the value. 
+  }]
+  ,}
+  "tags": [String] // Optional. Encrypted dimension tags passed by respective channels
+}
+```
+
+#### Example Sample Event
+
+```json
+{
+  "eid": "API",
+  "ets": 1704370153123,
+  "ver": "1.0",
+  "mid": "db1211ee-66dc-4b39-b91f-65b94034000c",
+  "context": {
+    "channel": "le-ps-bap-network.onest.network",
+    "domain": "onest:learning-experiences",
+    "pdata": {
+      "id": "le-ps-bap-network.onest.network",
+      "uri": "https://le-ps-bap-network.onest.network"
+    },
+    "source": {
+      "id": "le-ps-bap-network.onest.network",
+      "type": "seeker",
+      "uri": "https://le-ps-bap-network.onest.network"
+    },
+    "target": {
+      "id": "le-ps-bpp-network.onest.network",
+      "type": "provider",
+      "uri": "https://le-ps-bpp-network.onest.network"
+    },
+    "cdata": [
+      {
+        "type": "cityname",
+        "value": "Bangalore",
+        "valuetype": "string"
+      },
+      {
+        "type": "citycode",
+        "value": "std:080",
+        "valuetype": "string"
+      },
+      {
+        "type": "countryname",
+        "value": "India",
+        "valuetype": "string"
+      },
+      {
+        "type": "countrycode",
+        "value": "IND",
+        "valuetype": "string"
+      }
+    ]
+  },
+  "data": {
+    "url": "/search",
+    "method": "POST",
+    "action": "search",
+    "transactionid": "d4ae9294-ab00-11ee-9db4-325096b39f47",
+    "msgid": "d4ae99ec-ab00-11ee-be29-325096b39f47",
+    "statuscode": "200",
+    "duration": 52,
+    "exdata": []
+  }
+}
+```

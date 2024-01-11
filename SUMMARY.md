@@ -20,6 +20,7 @@
   * [Financial Support](learn/reference-implementation-guides/financial-support.md)
 * [Integration of Open Source Adaptors](learn/integration-of-open-source-adaptors/README.md)
   * [Beckn Protocol Server](learn/integration-of-open-source-adaptors/beckn-protocol-server.md)
+* [Network Observability](learn/network-observability.md)
 * [Learning Path](learn/learning-path.md)
 
 ## Community
