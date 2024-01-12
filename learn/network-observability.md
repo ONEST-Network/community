@@ -32,7 +32,7 @@ telemetry:
     enabled: true
     url: "https://data.onest.network/data/v1/in/onest-network-telemetry"
     batchSize: 50
-    syncInterval: 30
+    syncInterval: 5
 ```
 
 Protocol server will generate the telemetry events and sends in a batch 50 or once in every 30 min to ONEST Obsrv.
