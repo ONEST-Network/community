@@ -22,7 +22,7 @@ The observability infrastructure and services will be accessible to all network 
 
 We enhanced the Protocol Server to generate telemetry and send to ONEST Obsrv. Use this&#x20;
 
-[GitHub Repo](https://github.com/pveleneni/protocol-server/tree/telemetry-generation) to get the protocol server code and use it. Add the following configuration in default.yml
+[GitHub Repo](https://github.com/ONEST-Network/protocol-server/tree/master) to get the protocol server code and use it. Add the following configuration in default.yml
 
 file:
 
