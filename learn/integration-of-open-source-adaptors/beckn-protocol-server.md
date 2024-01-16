@@ -42,7 +42,7 @@ There would 2 instances of Protocol Server that is running. One is `Client` faci
 
 As the Protocol Server repository is Public, clone the repository and checkout to master branch.\
 \
-[Repository Link](https://github.com/ONEST-Network/protocol-server/tree/master)
+[Repository Link](https://github.com/beckn/protocol-server/tree/develop)
 
 ```
 1. git clone https://github.com/beckn/protocol-server.git
