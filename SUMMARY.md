@@ -20,7 +20,10 @@
   * [Financial Support](learn/reference-implementation-guides/financial-support.md)
 * [Integration of Open Source Adaptors](learn/integration-of-open-source-adaptors/README.md)
   * [Beckn Protocol Server](learn/integration-of-open-source-adaptors/beckn-protocol-server.md)
-* [Network Observability](learn/network-observability.md)
+* [Network Observability](learn/network-observability/README.md)
+  * [Introduction](learn/network-observability/introduction.md)
+  * [How to Generate and Send Telemetry to ONEST Obsrv](learn/network-observability/how-to-generate-and-send-telemetry-to-onest-obsrv.md)
+  * [Dashboard Details](learn/network-observability/dashboard-details.md)
 * [Learning Path](learn/learning-path.md)
 
 ## Community
