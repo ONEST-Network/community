@@ -51,7 +51,7 @@ Before you begin, please ensure that you have filled out the "Join Us" form link
 **Step 5:** Test with reference BPP (provider platform) on the sandbox. The following is the postman collection:\
 [https://raw.githubusercontent.com/beckn/DSEP-Specification/draft/examples/postman-collection/sandbox-sample-collection.json](https://raw.githubusercontent.com/beckn/DSEP-Specification/draft/examples/postman-collection/sandbox-sample-collection.json)
 
-**Step 6:** Demo the end-to-end flow to ONEST Team and get sandbox sign-off.
+**Step 6:** Share the logs [here](https://github.com/ONEST-Network/verification-logs) by following these [steps](https://github.com/ONEST-Network/verification-logs/blob/main/README.md) and get sign-off by ONEST Team
 
 **Step 7:**  Register onto to Production [ONEST Registry](https://prod.onest.network/) and Go Live !!!
 
