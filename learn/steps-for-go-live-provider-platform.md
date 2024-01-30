@@ -42,7 +42,7 @@ Before you begin, please ensure that you have filled out the "Join Us" form link
 
 **Step 4:** [developing-the-apis.md](developing-the-apis.md "mention")
 
-* Beckn Protocol Server is a service that helps the application connect to ONEST Network. It follows the [Beckn Protocol](https://beckn.network/protocol) and makes it more accessible for the applications to get started with ONEST implementation. Any network participant can run this server and connect to ONEST Network: [beckn-protocol-server.md](integration-of-open-source-adaptors/beckn-protocol-server.md "mention")
+* Beckn Protocol Server is a service that helps the application connect to ONEST Network. It follows the [Beckn Protocol](https://beckn.network/protocol) and makes it more accessible for the applications to get started with ONEST implementation. Any network participant can run this server and connect to ONEST Network: [beckn-protocol-server](integration-of-open-source-adaptors/beckn-protocol-server/ "mention")
 
 **Step 5:** Test with reference seeker platform (BAP) on the sandbox. The following is the postman collection:\
 [https://raw.githubusercontent.com/beckn/DSEP-Specification/draft/examples/postman-collection/sandbox-sample-collection.json](https://raw.githubusercontent.com/beckn/DSEP-Specification/draft/examples/postman-collection/sandbox-sample-collection.json)
