@@ -1405,132 +1405,181 @@ The request will contain only minimal details about the job like job name, job d
 }
 ```
 
-7. BAP confirms user wants to submit the job application.
+7. BAP confirms user wants to submit the job application.\
+   \
+   Distributor details(tag) and fields in it are optional. These details are collected by seeker and sent to provider.
 
 #### confirm API
 
-```
+```json
 {
-    "context": {
-        "domain": "onest:work-opportunities",
-        "version": "1.1.0",
-        "action": "confirm",
-        "bap_id": "worker-hub.bap.io",
-        "bap_uri": "https://worker-hub.bap.io",
-        "bpp_id": "job-hub.bpp.io",
-        "bpp_uri": "https://job-hub.bpp.io",
-        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62195",
-        "message_id": "481a01fc-4b45-4d49-9558-c6a7dfad8b75",
-        "ttl": "PT10M",
-        "timestamp": "2023-02-23T08:09:02.172Z"
-    },
-    "message": {
-        "order": {
-            "provider": {
-                "id": "1"
-            },
-            "items": [
-                {
-                    "id": "a23f2fdfbbb8ac402bf259d75402eb0792f50c095f7d08a55475e7af1c2dadca",
-                    "fulfillment_ids": [
-                        "1"
-                    ]
-                }
-            ],
-            "fulfillments": [
-                {
-                    "id": "1",
-                    "customer": {
-                        "person": {
-                            "name": "Sanjay",
-                            "gender": "Male",
-                            "age": "35",
-                            "skills": [
-                                {
-                                    "code": "Android",
-                                    "name": "Android"
-                                },
-                                {
-                                    "code": "AWS",
-                                    "name": "AWS"
-                                }
-                            ],
-                            "languages": [
-                                {
-                                    "code": "en",
-                                    "name": "english"
-                                },
-                                {
-                                    "code": "ml",
-                                    "name": "Malayalam"
-                                },
-                                {
-                                    "code": "hi",
-                                    "name": "Hindi"
-                                }
-                            ],
-                            "tags": [
-                                {
-                                    "code": "current-experience",
-                                    "list": [
-                                        {
-                                            "descriptor": {
-                                                "code": "exp-years",
-                                                "name": "Experience"
-                                            },
-                                            "value": "P4Y2M"
-                                        },
-                                        {
-                                            "descriptor": {
-                                                "code": "current-company",
-                                                "name": "Current Company"
-                                            },
-                                            "value": "ABC tech"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "code": "salary-details",
-                                    "list": [
-                                        {
-                                            "descriptor": {
-                                                "code": "expected-salary",
-                                                "name": "Expected Salary"
-                                            },
-                                            "value": "80000"
-                                        },
-                                        {
-                                            "descriptor": {
-                                                "code": "current-salary",
-                                                "name": "Current Salary"
-                                            },
-                                            "value": "50000"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "code": "documents",
-                                    "list": [
-                                        {
-                                            "descriptor": {
-                                                "code": "resume",
-                                                "name": "resume"
-                                            },
-                                            "value": "https://link-to-the-document.com"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        "contact": {
-                            "phone": "9999999999999",
-                            "email": "abc@abc.bc"
-                        }
-                    }
-                }
-            ]
+  "context": {
+    "domain": "onest:work-opportunities",
+    "version": "1.1.0",
+    "action": "confirm",
+    "bap_id": "worker-hub.bap.io",
+    "bap_uri": "https://worker-hub.bap.io",
+    "bpp_id": "job-hub.bpp.io",
+    "bpp_uri": "https://job-hub.bpp.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62195",
+    "message_id": "481a01fc-4b45-4d49-9558-c6a7dfad8b75",
+    "ttl": "PT10M",
+    "timestamp": "2023-02-23T08:09:02.172Z"
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "1"
+      },
+      "items": [
+        {
+          "id": "a23f2fdfbbb8ac402bf259d75402eb0792f50c095f7d08a55475e7af1c2dadca",
+          "fulfillment_ids": [
+            "1"
+          ]
         }
+      ],
+      "fulfillments": [
+        {
+          "id": "1",
+          "customer": {
+            "person": {
+              "name": "Sanjay",
+              "gender": "Male",
+              "age": "35",
+              "skills": [
+                {
+                  "code": "Android",
+                  "name": "Android"
+                },
+                {
+                  "code": "AWS",
+                  "name": "AWS"
+                }
+              ],
+              "languages": [
+                {
+                  "code": "en",
+                  "name": "english"
+                },
+                {
+                  "code": "ml",
+                  "name": "Malayalam"
+                },
+                {
+                  "code": "hi",
+                  "name": "Hindi"
+                }
+              ],
+              "tags": [
+                {
+                  "code": "current-experience",
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "exp-years",
+                        "name": "Experience"
+                      },
+                      "value": "P4Y2M"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "current-company",
+                        "name": "Current Company"
+                      },
+                      "value": "ABC tech"
+                    }
+                  ]
+                },
+                {
+                  "code": "salary-details",
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "expected-salary",
+                        "name": "Expected Salary"
+                      },
+                      "value": "80000"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "current-salary",
+                        "name": "Current Salary"
+                      },
+                      "value": "50000"
+                    }
+                  ]
+                },
+                {
+                  "code": "documents",
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "resume",
+                        "name": "resume"
+                      },
+                      "value": "https://link-to-the-document.com"
+                    }
+                  ]
+                },
+                {
+                  "code": "distributor-details",
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "distributor-id",
+                        "name": "Distributor Id"
+                      },
+                      "value": "PNB"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "distributor-name",
+                        "name": "Distributor Name"
+                      },
+                      "value": "Pay Near By"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "distributor-phone",
+                        "name": "Distributor Phone"
+                      },
+                      "value": "9123456789"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "distributor-email",
+                        "name": "Distributor Email"
+                      },
+                      "value": "support@pnb.com"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "agent-id",
+                        "name": "Agent Id"
+                      },
+                      "value": "agent-123"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "agent-verified",
+                        "name": "Agent verified"
+                      },
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            },
+            "contact": {
+              "phone": "9999999999999",
+              "email": "abc@abc.bc"
+            }
+          }
+        }
+      ]
     }
+  }
 }
 ```
 
@@ -1538,7 +1587,7 @@ The request will contain only minimal details about the job like job name, job d
 
 #### On Confirm API
 
-```
+```json
 {
   "context": {
     "domain": "onest:work-opportunities",
@@ -1884,6 +1933,53 @@ The request will contain only minimal details about the job like job name, job d
                       "value": "https://link-to-the-document.com"
                     }
                   ]
+                },
+                {
+                  "code": "distributor-details",
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "distributor-id",
+                        "name": "Distributor Id"
+                      },
+                      "value": "PNB"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "distributor-name",
+                        "name": "Distributor Name"
+                      },
+                      "value": "Pay Near By"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "distributor-phone",
+                        "name": "Distributor Phone"
+                      },
+                      "value": "9123456789"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "distributor-email",
+                        "name": "Distributor Email"
+                      },
+                      "value": "support@pnb.com"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "agent-id",
+                        "name": "Agent Id"
+                      },
+                      "value": "agent-123"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "agent-verified",
+                        "name": "Agent verified"
+                      },
+                      "value": "true"
+                    }
+                  ]
                 }
               ]
             },
@@ -1897,5 +1993,4 @@ The request will contain only minimal details about the job like job name, job d
     }
   }
 }
-
 ```
