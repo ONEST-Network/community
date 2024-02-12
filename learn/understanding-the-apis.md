@@ -42,11 +42,11 @@ Below is the example usage of protocol APIs in ONEST Learning Experiences Domain
 | On Confirm API | Send course content details (like video player, PDF etc) |
 | Status API     | Request the course consumption status                    |
 | On Status API  | Returns the course consumption status                    |
-| Rating API     | Provide rating for the course, cousre provider etc       |
+| Rating API     | Provide rating for the course, course provider etc       |
 | On Rating API  | Acknowledge rating                                       |
 
 \
-Refer to [reference-implementation-guides](reference-implementation-guides/ "mention")to understand APIs usage in other ONEST domains (Financial Support, Work Opportunities and Expert Connect).
+Refer to [reference-implementation-guides](reference-implementation-guides/ "mention")to understand APIs usage in other ONEST domains (Learning Experience, Financial Support, Work Opportunities and Expert Connect).
 
 ### Reference &#x20;
 

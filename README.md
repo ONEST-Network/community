@@ -4,7 +4,7 @@ description: >-
   get a strong understanding about ONEST and helps them go live on the network.
 ---
 
-# Introduction
+# Introduction & Roles you can play
 
 In today's rapidly growing and evolving world, access to quality education and skill development has become a global challenge. Our traditional education system suffers from multiple limitations like financial barriers, geographical limitation, lack of discoverability, portability and high cost of trust verification, leaving individuals with limited opportunities to acquire essential skills. To empower individuals, it is crucial to provide them with the right skills, knowledge, and opportunities to adapt and succeed in an ever-evolving environment.
 
@@ -18,13 +18,13 @@ The objective of setting up ONEST is to break the current siloed ecosystem where
 
 
 
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### What will ONEST enable?
 
 ONEST will enable B2B & B2C discovery and transactions and will help address the needs of service providers as well as service consumers in the education and job ecosystem by establishing platform-agnostic interoperability on the same analogy of UPI. Organizations and individuals will also be able to broadcast their services & content facilitating a democratic and informed approach facilitating “freedom of choice” to end consumers select the services from a surplus pool of providers of their choice as per their preferences in terms of services, location, and affordability.  The initiative also envisages a mechanism to identify each other uniquely, trust each other, and store their credentials including proof of work in machine-readable formats which are portable and verifiable across different tenets, to help them build reputation and credibility.
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Read more [_**here**_](https://onest.network/images/PDF/ONEST-Concept-Paper.pdf)_**.**_\
 

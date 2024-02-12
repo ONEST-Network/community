@@ -524,7 +524,7 @@ The request will contain only minimal details about the job like course name, de
 
 6. BPP sends the payment URL and if any additional details of the user are required, an xinput form is sent in on\_init request to collect them.\
    \
-   If BPP has multiple forms to collect the data, he will make on\_init request with the form number(current index) and total number of forms(max index). BPP should generate the xinput form with transaction id(request.context.transaction\_id). So that the forms can be tagged with a lifecyle.\
+   If BPP has multiple forms to collect the data, he will make on\_init request with the form number(current index) and total number of forms(max index). BPP should generate the xinput form with transaction id(request.context.transaction\_id). So that the forms can be tagged with a lifecycle.\
    \
    BAP should render the xinput form on the UI and collect all the details.\
    \
