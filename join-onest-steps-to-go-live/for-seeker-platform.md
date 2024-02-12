@@ -20,7 +20,7 @@ Discovery, Order, Fulfilment, Post-fulfilment are the four stages  in an order l
 
 ### **Prerequisites**&#x20;
 
-* [ ] Watched all the videos from [open-source-beckn-protocol-server](../learn/integration-of-adaptors/open-source-beckn-protocol-server/ "mention")
+* [ ] Watched all the videos from [beckn-protocol-server.md](../learn/integration-of-open-source-adaptors/beckn-protocol-server.md "mention")
 * [ ] Watched all the videos from [getting-started-on-dsep-video-library](../learn/getting-started-on-dsep-video-library/ "mention")
 * [ ] Read [understanding-the-apis.md](../learn/understanding-the-apis.md "mention")
 * [ ] Your technical team must have a DevOps Engineer, a Developer and UI Engineer&#x20;
@@ -48,7 +48,7 @@ Before you begin, please ensure that you have filled out the "Join Us" form link
 
 **Step 4:** Read [developing-the-apis.md](../learn/developing-the-apis.md "mention")
 
-* Beckn Protocol Server is an open-source service that helps applications connect to any network that is using Beckn Protocol including ONEST. It follows the Beckn protocol and makes it easier for the applications to get started with ONEST implementation. Routing, request signing, schema and signature validation etc is done by this service. More details about the open-source package can be found here: [open-source-beckn-protocol-server](../learn/integration-of-adaptors/open-source-beckn-protocol-server/ "mention")&#x20;
+* Beckn Protocol Server is an open-source service that helps applications connect to any network that is using Beckn Protocol including ONEST. It follows the Beckn protocol and makes it easier for the applications to get started with ONEST implementation. Routing, request signing, schema and signature validation etc is done by this service. More details about the open-source package can be found here: [beckn-protocol-server.md](../learn/integration-of-open-source-adaptors/beckn-protocol-server.md "mention")&#x20;
 * Network participants can use EITHER the Beckn Protocol Server - the open-source service or develop it themselves or avail a TSP.
 
 **Step 5:** Refer [network-observability](../network-observability/ "mention")to generate telemetry and send to the ONEST network.

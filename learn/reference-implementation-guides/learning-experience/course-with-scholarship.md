@@ -263,7 +263,7 @@ The request will contain only minimal details about the job like course name, de
 
 #### On Select API
 
-Order object contains the offers which includes the scholarship details and BPP details. If users wants to apply to the scholarship, BAP can start the financial support API flow from  [#init-api](../financial-support.md#init-api "mention")&#x20;
+Order object contains the offers which includes the scholarship details and BPP details. If users wants to apply to the scholarship, BAP can start the financial support API flow from  [#init-api](../financial-support/#init-api "mention")&#x20;
 
 Financial Support APIs:
 

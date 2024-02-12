@@ -24,7 +24,7 @@ There would 2 instances of Protocol Server that is running. One is `Client` faci
 
 `Network` facing Protocol Server manages forwarding the request to the respective Participant or Beckn Gateway (BG). Also it validates the incoming requests from Participants & BG as per the Standard Beckn Open API schema and then validates the signature sent from the clients to ensure the data integrity.
 
-<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 **In the case of BPP**\
 \
@@ -32,11 +32,11 @@ There would 2 instances of Protocol Server that is running. One is `Client` faci
 
 `Network` facing Protocol Server also listens to the Message Queue and forwards the request to the respective Participant or BG. Also it validates the incoming requests from Participants & BG as per the Standard Beckn Open API schema and then validates the signature sent from the clients to ensure the data integrity.
 
-<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Installation
 
-* Docker version 20.10 or above ([docker-installation.md](docker-installation.md "mention"))
+* Docker version 20.10 or above ([docker-installation.md](../integration-of-adaptors/open-source-beckn-protocol-server/docker-installation.md "mention"))
 
 ### Download
 
