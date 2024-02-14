@@ -1261,7 +1261,9 @@ The request will contain only minimal details about the job like course name, de
 }
 ```
 
-8. BAP sends confirms request to confirm the course subscription.
+8. BAP sends confirms request to confirm the course subscription.\
+   \
+   Distributor details(tag) and fields in it are optional. These details are collected by seeker and sent to provider.
 
 #### Confirm API
 
@@ -1308,7 +1310,56 @@ The request will contain only minimal details about the job like course name, de
               "phone": "+91-9663088848",
               "email": "jane.doe@example.com"
             }
-          }
+          },
+          "tags": [
+            {
+              "code": "distributor-details",
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "distributor-id",
+                    "name": "Distributor Id"
+                  },
+                  "value": "PNB"
+                },
+                {
+                  "descriptor": {
+                    "code": "distributor-name",
+                    "name": "Distributor Name"
+                  },
+                  "value": "Pay Near By"
+                },
+                {
+                  "descriptor": {
+                    "code": "distributor-phone",
+                    "name": "Distributor Phone"
+                  },
+                  "value": "9123456789"
+                },
+                {
+                  "descriptor": {
+                    "code": "distributor-email",
+                    "name": "Distributor Email"
+                  },
+                  "value": "support@pnb.com"
+                },
+                {
+                  "descriptor": {
+                    "code": "agent-id",
+                    "name": "Agent Id"
+                  },
+                  "value": "agent-123"
+                },
+                {
+                  "descriptor": {
+                    "code": "agent-verified",
+                    "name": "Agent verified"
+                  },
+                  "value": "true"
+                }
+              ]
+            }
+          ]
         }
       ],
       "payments": [

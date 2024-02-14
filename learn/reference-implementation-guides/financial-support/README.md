@@ -2807,71 +2807,130 @@ If there are no more forms to be filled, BPP will send on\_init request without 
 
 ```json
 {
-   "context": {
-      "domain": "onest:financial-support",
-      "action": "confirm",
-      "timestamp": "2023-08-02T07:21:58.448Z",
-      "ttl": "PT10M",
-      "version": "1.1.0",
-      "bap_id": "sample.bap.io",
-      "bap_uri": "https://sample.bap.io",
-      "bpp_id": "sample.bpp.io",
-      "bpp_uri": "https://sample.bpp.io",
-      "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
-      "message_id": "f6a7d7ea-a23e-4419-b07e-a3412fdffecf"
-   },
-   "message": {
-      "order": {
-         "items": [
-            {
-               "id": "SCM_63587501"
-            }
-         ],
-         "provider": {
-            "id": "BX213573733"
-         },
-         "billing": {
-            "name": "Manjunath",
-            "organization": {
-               "descriptor": {
-                  "name": "Namma Yatri",
-                  "code": "nammayatri.in"
-               },
-               "contact": {
-                  "phone": "+91-8888888888",
-                  "email": "scholarships@nammayatri.in"
-               }
-            },
-            "address": "No 27, XYZ Lane, etc",
-            "phone": "+91-9999999999"
-         },
-         "fulfillments": [
-            {
-               "customer": {
-                  "id": "aadhaar:798677675565",
-                  "person": {
-                     "name": "Jane Doe",
-                     "age": "13",
-                     "gender": "female"
-                  },
-                  "contact": {
-                     "phone": "+91-9663088848",
-                     "email": "jane.doe@example.com"
-                  }
-               }
-            }
-         ],
-         "payment" : [
-            {
-               "params" :{
-                  "bank_code": "IFSC_Code_Of_the_bank",
-                  "bank_account_number" :"121212121212",
-                  "bank_account_name" : "Account Holder Name"
-               }
-            }
-         ]
+  "context": {
+    "domain": "onest:financial-support",
+    "location": {
+      "city": {
+        "name": "Bangalore",
+        "code": "std:080"
+      },
+      "country": {
+        "name": "India",
+        "code": "IND"
       }
-   }
+    },
+    "action": "confirm",
+    "timestamp": "2023-08-02T07:21:58.448Z",
+    "ttl": "PT10M",
+    "version": "1.1.0",
+    "bap_id": "sample.bap.io",
+    "bap_uri": "https://sample.bap.io",
+    "bpp_id": "sample.bpp.io",
+    "bpp_uri": "https://sample.bpp.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+    "message_id": "f6a7d7ea-a23e-4419-b07e-a3412fdffecf"
+  },
+  "message": {
+    "order": {
+      "items": [
+        {
+          "id": "SCM_63587501"
+        }
+      ],
+      "provider": {
+        "id": "BX213573733"
+      },
+      "billing": {
+        "name": "Manjunath",
+        "organization": {
+          "descriptor": {
+            "name": "Namma Yatri",
+            "code": "nammayatri.in"
+          },
+          "contact": {
+            "phone": "+91-8888888888",
+            "email": "scholarships@nammayatri.in"
+          }
+        },
+        "address": "No 27, XYZ Lane, etc",
+        "phone": "+91-9999999999"
+      },
+      "fulfillments": [
+        {
+          "customer": {
+            "id": "aadhaar:798677675565",
+            "person": {
+              "name": "Jane Doe",
+              "age": "13",
+              "gender": "female"
+            },
+            "contact": {
+              "phone": "+91-9663088848",
+              "email": "jane.doe@example.com"
+            }
+          },
+          "tags": [
+            {
+              "code": "distributor-details",
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "distributor-id",
+                    "name": "Distributor Id"
+                  },
+                  "value": "PNB"
+                },
+                {
+                  "descriptor": {
+                    "code": "distributor-name",
+                    "name": "Distributor Name"
+                  },
+                  "value": "Pay Near By"
+                },
+                {
+                  "descriptor": {
+                    "code": "distributor-phone",
+                    "name": "Distributor Phone"
+                  },
+                  "value": "9123456789"
+                },
+                {
+                  "descriptor": {
+                    "code": "distributor-email",
+                    "name": "Distributor Email"
+                  },
+                  "value": "support@pnb.com"
+                },
+                {
+                  "descriptor": {
+                    "code": "agent-id",
+                    "name": "Agent Id"
+                  },
+                  "value": "agent-123"
+                },
+                {
+                  "descriptor": {
+                    "code": "agent-verified",
+                    "name": "Agent verified"
+                  },
+                  "value": "true"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "payment": [
+        {
+          "params": {
+            "bank_code": "IFSC_Code_Of_the_bank",
+            "bank_account_number": "121212121212",
+            "bank_account_name": "Account Holder Name"
+          }
+        }
+      ]
+    }
+  }
 }
 ```
 
