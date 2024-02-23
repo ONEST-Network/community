@@ -52,8 +52,8 @@
 * [Understanding the APIs](learn/understanding-the-apis.md)
 * [Developing the APIs](learn/developing-the-apis.md)
 * [Integration of Adaptors](learn/integration-of-adaptors/README.md)
-  * [Open Source Beckn Protocol Server](learn/integration-of-open-source-adaptors/beckn-protocol-server.md)
-    * [Docker Installation](learn/integration-of-adaptors/open-source-beckn-protocol-server/docker-installation.md)
+  * [Beckn Protocol Server](learn/integration-of-adaptors/beckn-protocol-server/README.md)
+    * [Docker Installation](learn/integration-of-adaptors/beckn-protocol-server/docker-installation.md)
 * [Learning Path](learn/learning-path.md)
 
 ## Community

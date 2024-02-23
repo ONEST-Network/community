@@ -20,7 +20,7 @@ Discovery, Order, Fulfilment, Post-fulfilment are the four stages  in an order l
 
 ### **Prerequisites:**
 
-* [ ] Watched all the videos from [beckn-protocol-server.md](../learn/integration-of-open-source-adaptors/beckn-protocol-server.md "mention")
+* [ ] Watched all the videos from [beckn-protocol-server](../learn/integration-of-adaptors/beckn-protocol-server/ "mention")
 * [ ] Watched all the videos from [getting-started-on-dsep-video-library](../learn/getting-started-on-dsep-video-library/ "mention")
 * [ ] Read [understanding-the-apis.md](../learn/understanding-the-apis.md "mention")
 * [ ] Your technical team must have a DevOps Engineer and a Developer
@@ -42,7 +42,7 @@ Before you begin, please ensure that you have filled out the "Join Us" form link
 
 **Step 4:** Read [developing-the-apis.md](../learn/developing-the-apis.md "mention")
 
-* Beckn protocol Server is an open-source service that helps applications connect to any network that is using beckn protocol including ONEST. It follows the beckn protocol and makes it easier for the applications to get started with ONEST implementation. Routing, request signing, schema and signature validation etc is done by this service. More details about the open-source package can be found here: [beckn-protocol-server.md](../learn/integration-of-open-source-adaptors/beckn-protocol-server.md "mention")&#x20;
+* Beckn protocol Server is an open-source service that helps applications connect to any network that is using beckn protocol including ONEST. It follows the beckn protocol and makes it easier for the applications to get started with ONEST implementation. Routing, request signing, schema and signature validation etc is done by this service. More details about the open-source package can be found here: [beckn-protocol-server](../learn/integration-of-adaptors/beckn-protocol-server/ "mention")&#x20;
 * Network participants can use Beckn Protocol Server - the open-source service or develop it themselves or avail a TSP.
 
 **Step 5:** Refer [network-observability](../network-observability/ "mention")to generate telemetry and send to the ONEST network
