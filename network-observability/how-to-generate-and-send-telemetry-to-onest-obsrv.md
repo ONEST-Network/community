@@ -12,13 +12,15 @@ Add the following configuration in `default-bap-client.yml` , `default-bap-netwo
 # sync interval is in minutes
 telemetry:
     enabled: true
-    url: "https://data.onest.network/data/v1/in/onest-network-telemetry"
+    url: "TELEMETRY_SERVER_URL"
     batchSize: 100
     syncInterval: 5
     redis_db: 3
 ```
 
 Protocol server will generate the telemetry events and sends in a batch 100 or once in every 5 min to ONEST Obsrv.
+
+**Note:** For TELEMETRY\_SERVER\_URL, please reach out to ONEST team.
 
 #### Using the API (without Protocol Server)
 
@@ -27,7 +29,7 @@ For the NPs not using Beckn Protocol Server, use the following API to send Telem
 **API curl command**
 
 ```url
-curl --location 'https://data.onest.network/data/v1/in/onest-network-telemetry' \
+curl --location '{TELEMETRY_SERVER_URL}' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: connect.sid=s%3A_lOGJkWqLRNJYGyO_RBw6PIohSJxR9m2.vIE8kli9EJ%2FJplbI22GwPb%2BHpclnxoKxZcwEG%2F%2FPYu4' \
 --data '{
@@ -43,7 +45,7 @@ curl --location 'https://data.onest.network/data/v1/in/onest-network-telemetry' 
 **Sample API Payloads**
 
 ```
-curl --location 'https://data.onest.network/data/v1/in/onest-network-telemetry' \
+curl --location '{TELEMETRY_SERVER_URL}' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: connect.sid=s%3A_lOGJkWqLRNJYGyO_RBw6PIohSJxR9m2.vIE8kli9EJ%2FJplbI22GwPb%2BHpclnxoKxZcwEG%2F%2FPYu4' \
 --data '{
