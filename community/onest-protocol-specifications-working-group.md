@@ -1,6 +1,8 @@
 # ONEST Protocol Specifications Working Group
 
-The working group is dedicated to improving the efficiency, reliability, and usability of the ONEST network protocols. By fostering open discussion, sharing best practices, and addressing challenges, the group endeavours to drive continuous innovation and evolution of the network ecosystem. We welcome all network participants and volunteers to contribute and shape the future of the protocol!
+The working group is dedicated to improving the efficiency, reliability, and usability of the ONEST network protocols. By fostering open discussion, sharing best practices, and addressing challenges, the group endeavours to drive continuous innovation and evolution of the network ecosystem. We welcome all network participants and volunteers to contribute and shape the future of the protocol!\
+\
+**ONEST Specification** GitHub Repository [Link](https://github.com/ONEST-Network/ONEST-Specification)
 
 We will be conducting weekly calls to start this off, and would broadly be going over the following:
 
