@@ -4,6 +4,6 @@ Choose the guide basis your domain.
 
 [learning-experience](learning-experience/ "mention")
 
-[work-opportunities](work-opportunities/ "mention")
+[work-opportunities.md](work-opportunities.md "mention")
 
-[financial-support](financial-support/ "mention")
+[financial-support.md](financial-support.md "mention")
