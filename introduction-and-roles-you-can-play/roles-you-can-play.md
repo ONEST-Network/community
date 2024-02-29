@@ -4,7 +4,7 @@ An entity can play various roles on ONEST, the primary roles are
 
 **Provider Platform:** If you aspire to broaden the reach of the training, scholarships, jobs, and mentorship opportunities you offer, we invite you to join the network as a Provider Platform.\
 \
-**Provider**: If you’d like to be onboarded on an existing provider platform as one of the providers of the training, scholarships, jobs, and mentorship opportunities, we invite you to join the network as a Provider Platform.\
+**Provider**: If you’d like to be onboarded on an existing provider platform as one of the providers of the training, scholarships, jobs, and mentorship opportunities, we invite you to join the network as a Provider.\
 \
 **Seeker Platform**: If you seek to explore the vast array of training, scholarships, jobs, and mentorship opportunities available within the network, we encourage you to join as a Seeker Platform.\
 \
