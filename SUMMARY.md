@@ -55,8 +55,8 @@
 
 ## Community
 
-* [ONEST Protocol Specifications Working Group](community/onest-protocol-specifications-working-group/README.md)
-  * [Contribution Guide](community/onest-protocol-specifications-working-group/contribution-guide.md)
+* [ONEST Protocol Specifications Working Group](community/onest-protocol-specifications-working-group.md)
+* [Contribution Guide](community/contribution-guide.md)
 * [Community Events](community/community-events/README.md)
   * [Win Room Zero | 14-15 Sep, 2023](community/community-events/win-room-zero-or-14-15-sep-2023.md)
   * [Win Room One | 5 Oct, 2023](community/community-events/win-room-one-or-5-oct-2023.md)
