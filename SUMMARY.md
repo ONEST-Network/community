@@ -51,6 +51,7 @@
 * [Integration of Adaptors](learn/integration-of-adaptors/README.md)
   * [Beckn Protocol Server](learn/integration-of-adaptors/beckn-protocol-server/README.md)
     * [Docker Installation](learn/integration-of-adaptors/beckn-protocol-server/docker-installation.md)
+    * [FAQs](learn/integration-of-adaptors/beckn-protocol-server/faqs.md)
 * [Learning Path](learn/learning-path.md)
 
 ## Community
