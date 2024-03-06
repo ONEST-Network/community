@@ -46,7 +46,7 @@ Below is the example usage of protocol APIs in ONEST Learning Experiences Domain
 | On Rating API  | Acknowledge rating                                       |
 
 \
-Refer to [reference-implementation-guides](reference-implementation-guides/ "mention")to understand APIs usage in other ONEST domains (Learning Experience, Financial Support, Work Opportunities and Expert Connect).
+Refer to [onest-specifications](onest-specifications/ "mention")to understand APIs usage in other ONEST domains (Learning Experience, Financial Support, Work Opportunities and Expert Connect).
 
 ### Reference &#x20;
 

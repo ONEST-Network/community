@@ -38,7 +38,7 @@ Before you begin, please ensure that you have filled out the "Join Us" form link
 
 **Step 2:** [onboarding-sandbox-registration](../onboarding-sandbox-registration/ "mention")
 
-**Step 3:** Refer [reference-implementation-guides](../learn/reference-implementation-guides/ "mention") and understand the APIs schema from the  specifications and examples.
+**Step 3:** Refer [onest-specifications](../learn/onest-specifications/ "mention") and understand the APIs schema from the  specifications and examples.
 
 * (Latest) [https://github.com/beckn/DSEP-Specification/tree/draft/examples](https://github.com/beckn/DSEP-Specification/tree/draft/examples)
 
