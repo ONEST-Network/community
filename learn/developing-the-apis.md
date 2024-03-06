@@ -50,7 +50,7 @@ BPP should consume the following action APIs and trigger on\_action APIs.
 
 1. All the action and on\_action APIs have `context` and `message` objects. Refer to this [link](https://developers.becknprotocol.io/docs/core-specification/schema-reference/context/) to understand the list of properties in the context object.\
    \
-   Message object varies based on the API, refer [onest-specifications](onest-specifications/ "mention") for examples. Below is the sample API request with context and message objects.
+   Message object varies based on the API, refer [reference-implementation-guides](reference-implementation-guides/ "mention") for examples. Below is the sample API request with context and message objects.
 
 ```
 {
