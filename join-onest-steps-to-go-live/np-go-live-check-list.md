@@ -43,13 +43,5 @@
    1. Show current application status against an application ID (under process, reviewed, disbursed, etc)
    2. Any status update to be communicated/flagged to individual applicants via SMS. Standard SMS templates to be configured
    3. To give feature to view all applications, download data, perform actions on it, etc
-9. **Master data for SKU criteria matching with user profile data**
-   1. Location - Finalize master data - location - e.g. geotags for states ad cities, state codes, etc
-   2. Social identity-Finalize master data - social status
-   3. Professional Status of user or of parents (in case of minor)- Finalize master data - professional status
-   4. Gender-Finalize gender master data
-   5. Age-Finalize age master data
-10. **Network Observability**
-    1. Generate telemetry for all the protocol APIs (Search, On\_Search, Select, On\_select, Init, On\_Init, Confirm, On\_Confirm, Status, On\_status).
-11. **Protocol**
-    1. Current version of protocol
+9. [network-observability](../network-observability/ "mention")
+   1. Generate telemetry for all the protocol APIs (Search, On\_Search, Select, On\_select, Init, On\_Init, Confirm, On\_Confirm, Status, On\_status).
