@@ -8,6 +8,7 @@
   * [Seeker Registration](onboarding-sandbox-registration/seeker-registration.md)
   * [Provider Registration](onboarding-sandbox-registration/provider-registration.md)
 * [Join ONEST - Steps to Go Live](join-onest-steps-to-go-live/README.md)
+  * [NP Go-Live Check List](join-onest-steps-to-go-live/np-go-live-check-list.md)
   * [For Seeker Platform](join-onest-steps-to-go-live/for-seeker-platform.md)
   * [For Provider Platform](join-onest-steps-to-go-live/for-provider-platform.md)
 * [Network Observability](network-observability/README.md)
