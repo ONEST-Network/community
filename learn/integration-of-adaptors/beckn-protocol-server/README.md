@@ -45,7 +45,7 @@ As the Protocol Server repository is Public, clone the repository and checkout t
 [Repository Link](https://github.com/ONEST-Network/protocol-server)
 
 ```
-1. git clone https://github.com/beckn/protocol-server.git
+1. git clone https://github.com/ONEST-Network/protocol-server.git
 2. git checkout master
 3. cd protocol-server
 ```
