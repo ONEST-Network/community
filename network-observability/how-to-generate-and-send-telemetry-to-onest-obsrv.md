@@ -33,6 +33,10 @@ Protocol server will generate the telemetry events and sends in a batch 100 or o
 
 **Note:** For TELEMETRY\_SERVER\_URL, please reach out to ONEST team.
 
+#### Using the Open Network Telemetry SDK
+
+Please refer to the [readme](https://github.com/Sunbird-Obsrv/open-network-telemetry) for more details.
+
 #### Using the API (without Protocol Server)
 
 For the NPs not using Beckn Protocol Server, use the following API to send Telemetry to ONEST Obsrv.
