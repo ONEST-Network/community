@@ -50,8 +50,11 @@
 * [Understanding the APIs](learn/understanding-the-apis.md)
 * [Developing the APIs](learn/developing-the-apis.md)
 * [Integration of Adaptors](learn/integration-of-adaptors/README.md)
-  * [Beckn Protocol Server](learn/integration-of-adaptors/beckn-protocol-server/README.md)
-    * [Docker Installation](learn/integration-of-adaptors/beckn-protocol-server/docker-installation.md)
+  * [Protocol Server](learn/integration-of-adaptors/beckn-protocol-server/README.md)
+    * [Introduction & Features](learn/integration-of-adaptors/beckn-protocol-server/introduction-and-features.md)
+    * [Architecture](learn/integration-of-adaptors/beckn-protocol-server/architecture.md)
+    * [Installation](learn/integration-of-adaptors/beckn-protocol-server/installation.md)
+    * [Local Tunnelling and Nginx Setup](learn/integration-of-adaptors/beckn-protocol-server/local-tunnelling-and-nginx-setup.md)
     * [FAQs](learn/integration-of-adaptors/beckn-protocol-server/faqs.md)
 * [Learning Path](learn/learning-path.md)
 
