@@ -4,9 +4,13 @@
 
 * Docker version 20.10 or above ([setup guide](https://docs.docker.com/desktop/))
 
+### Infra Requirements:
+
+2 CPU, 8GB RAM - Ubuntu&#x20;
+
 ### Installation
 
-1. Go to the roor path (`~/`) in your system and clone this [repository](https://github.com/ONEST-Network/protocol-server).
+1. Go to the root path (`~/`) in your system and clone this [repository](https://github.com/ONEST-Network/protocol-server).
 
 ```sh
 git clone https://github.com/ONEST-Network/protocol-server.git
