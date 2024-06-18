@@ -79,7 +79,7 @@ BPP should consume the following action APIs and trigger on\_action APIs.
 
 2. Participant should sign the payload and send to gateway. [Steps](https://github.com/beckn/protocol-specifications/blob/master/docs/BECKN-006-Signing-Beckn-APIs-In-HTTP-Draft-01.md) to sign the request payload and verify when a payload received.
 3. [Error codes](https://github.com/beckn/protocol-specifications/blob/master/docs/BECKN-005-Error-Codes-Draft-01.md) implementation by BAP and BPP.
-4. Only search API goes through gateway, rest all APIs are between BAP and BPP. \
+4. Only search API goes through gateway, rest all APIs are between BAP and BPP.\
    Example: BAP sends search API to gateway, and it will broadcast to all available providers in that domain. Next, BPP will make on\_search API directly to BAP.
 
 **Note:** [beckn-protocol-server](integration-of-adaptors/beckn-protocol-server/ "mention") is a utility, which helps the participants to quickly develop the protocol APIs. It will help in signing and verification of payload signature, schema validation, sending and receiving requests to Gateway and Participants.
@@ -90,7 +90,7 @@ BPP should consume the following action APIs and trigger on\_action APIs.
 
 The registry lookup API can be used to get the details of all the participants in the registry. In request body, `type` can be `BG`,`BAP`, `BPP`
 
-```
+```url
 curl --location 'https://sandbox.onest.network/onest/lookup' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -99,3 +99,8 @@ curl --location 'https://sandbox.onest.network/onest/lookup' \
 }'
 ```
 
+### Gateway URL
+
+```url
+https://sandbox.onest.network/gateway
+```
