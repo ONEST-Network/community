@@ -11,3 +11,7 @@ Protocol Server is a service that helps the application connect to ONEST Network
 * Generates signatures for the outgoing requests and validates signatures for the incoming requests.
 * Stores log for each process.
 * Comes with key generation scripts for the Network participants.
+
+### Note
+
+[Protocol Server](https://starterpack.onest.network/learn/integration-of-adaptors/beckn-protocol-server) is a reference application, which helps the participants to quickly develop the protocol APIs. It is not mandate to use protocol server, it can be used as a reference in developing a seeker/provider system.
