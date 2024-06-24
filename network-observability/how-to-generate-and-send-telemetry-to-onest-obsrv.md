@@ -1,4 +1,4 @@
-# How to Generate and Send Telemetry to ONEST Obsrv
+# Telemetry Implementation
 
 #### Using the Protocol Server
 
@@ -580,3 +580,9 @@ curl --location '{TELEMETRY_SERVER_URL}' \
 ```
 
 Refer to this [doc](https://docs.google.com/document/d/1pG6nPQnR44EblckUmD6UdwJ5TrCjYQMjOdEBdNZ0V9I/edit), for more details about the open network telemetry specifications
+
+### Test Telemetry Generation
+
+1. Use the [https://webhook.site/](https://webhook.site/) to generate an endpoint URL.
+2. Set the webhook URL as Telemetry URL.
+3. Make few APIs calls and check whether the event is coming in webhook site or not.&#x20;

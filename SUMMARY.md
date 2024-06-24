@@ -10,7 +10,7 @@
   * [Provider Registration](onboarding-sandbox-registration/provider-registration.md)
 * [Network Observability](network-observability/README.md)
   * [Introduction](network-observability/introduction.md)
-  * [How to Generate and Send Telemetry to ONEST Obsrv](network-observability/how-to-generate-and-send-telemetry-to-onest-obsrv.md)
+  * [Telemetry Implementation](network-observability/how-to-generate-and-send-telemetry-to-onest-obsrv.md)
   * [Dashboard Details](network-observability/dashboard-details.md)
 
 ## Learn
