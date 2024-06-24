@@ -63,7 +63,7 @@
   * [Win Room Zero | 14-15 Sep, 2023](community/community-events/win-room-zero-or-14-15-sep-2023.md)
   * [Win Room One | 5 Oct, 2023](community/community-events/win-room-one-or-5-oct-2023.md)
 * [Discussion Forum](https://github.com/orgs/ONEST-Network/discussions)
-* [Discord Community](https://discord.gg/eB7CAmbrrB)
+* [Discord Community](community/discord-community.md)
 
 ## HELP
 
