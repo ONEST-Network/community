@@ -82,7 +82,11 @@ BPP should consume the following action APIs and trigger on\_action APIs.
 4. Only search API goes through gateway, rest all APIs are between BAP and BPP.\
    Example: BAP sends search API to gateway, and it will broadcast to all available providers in that domain. Next, BPP will make on\_search API directly to BAP.
 
-**Note:** [beckn-protocol-server](integration-of-adaptors/beckn-protocol-server/ "mention") is a utility, which helps the participants to quickly develop the protocol APIs. It will help in signing and verification of payload signature, schema validation, sending and receiving requests to Gateway and Participants.
+### **Note:**
+
+[beckn-protocol-server](integration-of-adaptors/beckn-protocol-server/ "mention") is a reference application, which helps the participants to quickly develop the protocol APIs. It will help in signing and verification of payload signature, schema validation, sending and receiving requests to Gateway and Participants.
+
+It is not mandate to use protocol server, it can be used as a reference in developing seeker/provider system.
 
 [Sample code](https://github.com/beckn-on-succinct/beckn-sdk-java/blob/master/src/test/java/in/succinct/beckn/SampleUseCase.java) for implementing signature and verification.
 
