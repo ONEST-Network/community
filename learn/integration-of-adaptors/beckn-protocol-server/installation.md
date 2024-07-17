@@ -27,7 +27,7 @@ bash setup.sh
 3. Go to docker\_data directory and run docker command.
 
 ```sh
-cd ~/docker_data
+cd ~/protocol-server/docker
 docker-compose up -d
 ```
 
