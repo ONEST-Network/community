@@ -51,6 +51,7 @@
     * [Introduction & Features](learn/integration-of-adaptors/beckn-protocol-server/introduction-and-features.md)
     * [Architecture](learn/integration-of-adaptors/beckn-protocol-server/architecture.md)
     * [Installation](learn/integration-of-adaptors/beckn-protocol-server/installation.md)
+    * [Generate Keys](learn/integration-of-adaptors/beckn-protocol-server/generate-keys.md)
     * [Local Tunnelling and Nginx Setup](learn/integration-of-adaptors/beckn-protocol-server/local-tunnelling-and-nginx-setup.md)
     * [FAQs](learn/integration-of-adaptors/beckn-protocol-server/faqs.md)
 * [Learning Path](learn/learning-path.md)

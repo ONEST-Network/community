@@ -31,7 +31,8 @@ cd ~/docker_data
 docker-compose up -d
 ```
 
-4\. Update the client and network server configuration by following below setups:&#x20;
+4. If sandbox registration is not done, Follow the steps [generate-keys.md](generate-keys.md "mention") to generate key pairs that will be used in registry entry and follow [onboarding-sandbox-registration](../../../onboarding-sandbox-registration/ "mention")to register.
+5. Update the client and network server configuration by following below setups:&#x20;
 
 **For BAP:**
 
