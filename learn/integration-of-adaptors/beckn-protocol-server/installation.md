@@ -89,8 +89,10 @@ docker-compose up -d
 
 5. After making the changes in configuration files, run the below commands to create bap/bpp client and network docker containers:       &#x20;
 
-* Execute `~/deploy-bap.sh` file to deploy the BAP Client and Network.
-* Execute `~/deploy-bpp.sh` file to deploy the BPP Client and Network.
+* Execute `./deploy-bap.sh` file to deploy the BAP Client and Network.
+* Execute `./deploy-bpp.sh` file to deploy the BPP Client and Network.
+
+6. Test the protocol server by following the steps in [testing.md](testing.md "mention")section.
 
 #### For PM2 Deployment
 
