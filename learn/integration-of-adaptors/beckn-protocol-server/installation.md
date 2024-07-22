@@ -2,8 +2,9 @@
 
 ### Setup Videos
 
-| BAP Mode Setup   | [https://www.loom.com/share/daec8556ddb74a65a893fd67d862b805?sid=fb24a0af-49a3-4c66-bf5a-e0a16389b8f1](https://www.loom.com/share/daec8556ddb74a65a893fd67d862b805?sid=fb24a0af-49a3-4c66-bf5a-e0a16389b8f1) |
+| Mode             | Video Link                                                                                                                                                                                                   |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| BAP Mode Setup   | [https://www.loom.com/share/daec8556ddb74a65a893fd67d862b805?sid=fb24a0af-49a3-4c66-bf5a-e0a16389b8f1](https://www.loom.com/share/daec8556ddb74a65a893fd67d862b805?sid=fb24a0af-49a3-4c66-bf5a-e0a16389b8f1) |
 | BAP Mode Testing | [https://www.loom.com/share/0cda9a05ab824ce288a82319155377f3?sid=339a4707-b4bb-43ff-81ba-d6e047d62945](https://www.loom.com/share/0cda9a05ab824ce288a82319155377f3?sid=339a4707-b4bb-43ff-81ba-d6e047d62945) |
 | BPP Mode Setup   | [https://www.loom.com/share/b320e436e5c04a529f1133a4f1f42c0a?sid=cc0e5fe7-95ba-41c2-9729-7b41c8328f4d](https://www.loom.com/share/b320e436e5c04a529f1133a4f1f42c0a?sid=cc0e5fe7-95ba-41c2-9729-7b41c8328f4d) |
 | BPP Mode Testing | [https://www.loom.com/share/37311b91bef747959a59420612a64a68?sid=df35c0cc-703d-4852-b87e-df7a690eea8e](https://www.loom.com/share/37311b91bef747959a59420612a64a68?sid=df35c0cc-703d-4852-b87e-df7a690eea8e) |
