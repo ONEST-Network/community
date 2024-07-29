@@ -588,5 +588,5 @@ Refer to this [repo](https://github.com/Sunbird-Obsrv/network-telemetry-spec), f
 ### Test Telemetry Generation
 
 1. Use the [https://webhook.site/](https://webhook.site/) to generate an endpoint URL.
-2. Set the webhook URL as Telemetry URL.
-3. Make few APIs calls and check whether the event is coming in webhook site or not.&#x20;
+2. Set the web hook URL as Telemetry URL.
+3. Ensure telemetry events are getting generated for all the relevant APIs in this [format](how-to-generate-and-send-telemetry-to-onest-obsrv.md#telemetry-event).
