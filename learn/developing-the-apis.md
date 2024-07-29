@@ -86,7 +86,7 @@ BPP should consume the following action APIs and trigger on\_action APIs.
 
 [beckn-protocol-server](integration-of-adaptors/beckn-protocol-server/ "mention") is a reference application, which helps the participants to quickly develop the protocol APIs. It will help in signing and verification of payload signature, schema validation, sending and receiving requests to Gateway and Participants.
 
-It is not mandate to use protocol server, it can be used as a reference in developing seeker/provider system.
+It is not mandatory to use the protocol server; you can build your own network adaptors to connect to the ONEST network.
 
 [Sample code](https://github.com/beckn-on-succinct/beckn-sdk-java/blob/master/src/test/java/in/succinct/beckn/SampleUseCase.java) for implementing signature and verification.
 

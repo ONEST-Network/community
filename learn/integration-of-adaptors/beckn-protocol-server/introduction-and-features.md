@@ -14,4 +14,4 @@ Protocol Server is a service that helps the application connect to ONEST Network
 
 ### Note
 
-[Protocol Server](https://starterpack.onest.network/learn/integration-of-adaptors/beckn-protocol-server) is a reference application, which helps the participants to quickly develop the protocol APIs. It is not mandate to use protocol server, it can be used as a reference in developing a seeker/provider system.
+[Protocol Server](https://starterpack.onest.network/learn/integration-of-adaptors/beckn-protocol-server) is a reference implementation of a network adaptor. It is not mandatory to use the protocol server. you can build your own network adaptor to connect to the ONEST network.
