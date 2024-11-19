@@ -12,4 +12,4 @@ The observability infrastructure within ONEST is designed to offer the following
 * Process the incoming data: validate for protocol compliance and mask any PII information present in the input data
 * Query the processed data via multiple modes: query API, dashboards (pre-created & ability to create new), and download the ingested data as files from cloud storage
 
-The observability infrastructure and services will be accessible to all network participants, allowing them to harness these resources for various purposes, in accordance with the policies set forth by the ONEST network.
+The observability infrastructure and services will be accessible to all network participants, allowing them to harness these resources for various purposes, in accordance with the policies set forth by the ONEST network
