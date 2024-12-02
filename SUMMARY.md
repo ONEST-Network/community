@@ -4,7 +4,6 @@
   * [ONEST- Focus Areas](introduction-and-roles-you-can-play/onest-focus-areas.md)
   * [Core Principles](introduction-and-roles-you-can-play/core-principles.md)
   * [Roles You Can Play](introduction-and-roles-you-can-play/roles-you-can-play.md)
-* [NP Go-Live Check List](np-go-live-check-list.md)
 * [Onboarding - Sandbox Registration](onboarding-sandbox-registration/README.md)
   * [Seeker Registration](onboarding-sandbox-registration/seeker-registration.md)
   * [Provider Registration](onboarding-sandbox-registration/provider-registration.md)

@@ -12,7 +12,7 @@ Additionally, as the technology and industries advance, there is an urgent need 
 
 To address these multifaceted challenges,  a paradigm shift from relying solely on centralized platforms for storing and exchanging value to embracing a decentralized network comprising interconnected ecosystem actors that facilitate the flow of value is necessary . An open network for education and skilling becomes indispensable, striving to bridge the skill gap, provide quality and trustworthy education, leverage EdTech's potential while fostering a collaborative community of learners and educators, thus empowering individuals to thrive in an ever-changing world.
 
-**Open Network for Education Skilling Transaction (ONEST)** fosters a fair and accessible network that is both open and decentralized, allowing individuals and organizations to harness its power to unlock their full potential, facilitating access to learning and livelihood opportunities.
+**Open Network for Employment and Skilling Tranformations (ONEST)** fosters a fair and accessible network that is both open and decentralized, allowing individuals and organizations to harness its power to unlock their full potential, facilitating access to learning and livelihood opportunities.
 
 The objective of setting up ONEST is to break the current siloed ecosystem where the education & content providers, education facilitators, education seekers, education facilitators & job providers operate in a fragmented and secluded manner which restricts collaborations that could have otherwise flourished into business & social partnerships aiming towards the same goal of “**equitable education** & skilling to **enhance employability** and **sustainable livelihood**.” &#x20;
 

@@ -4,7 +4,7 @@
 
 ONEST will primarily focus on enabling equitable opportunities for education, upskilling & jobs under the following four key categories,
 
-#### Learning Experiences: Content, Courses, Training
+#### Skilling Experiences: Content, Courses, Training
 
 ONEST facilitates skilling and upskilling by onboarding education providers and consumers, enabling the broadcast and discovery of courses, content, and training opportunities. It fosters healthy competition, drives innovation, and bridges supply-demand gaps, empowering individuals, organizations, and the Government to address challenges in the competitive job ecosystem effectively.
 
