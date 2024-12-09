@@ -26,7 +26,7 @@
   * [Chapter 9: Example of a Retail Transaction](learn/beckn-protocol-video-library/chapter-9-example-of-a-retail-transaction.md)
   * [Chapter 10: Example of a Logistics Transaction](learn/beckn-protocol-video-library/chapter-10-example-of-a-logistics-transaction.md)
   * [Chapter 11: Example of a Transaction using Interactive UI](learn/beckn-protocol-video-library/chapter-11-example-of-a-transaction-using-interactive-ui.md)
-* [Getting started on DSEP - Video Library](learn/getting-started-on-dsep-video-library/README.md)
+* [Getting started on DSEP 1.0 - Video Library](learn/getting-started-on-dsep-video-library/README.md)
   * [Chapter 1: Understanding Challenges in the Ecosystem](learn/getting-started-on-dsep-video-library/chapter-1-understanding-challenges-in-the-ecosystem.md)
   * [Chapter 2: Open Networks for Skilling and Education](learn/getting-started-on-dsep-video-library/chapter-2-open-networks-for-skilling-and-education.md)
   * [Chapter 3: DSEP Overview](learn/getting-started-on-dsep-video-library/chapter-3-dsep-overview.md)
@@ -60,13 +60,8 @@
 
 * [ONEST Protocol Specifications Working Group](community/onest-protocol-specifications-working-group.md)
 * [Contribution Guide](community/contribution-guide.md)
-* [Community Events](community/community-events/README.md)
-  * [Win Room Zero | 14-15 Sep, 2023](community/community-events/win-room-zero-or-14-15-sep-2023.md)
-  * [Win Room One | 5 Oct, 2023](community/community-events/win-room-one-or-5-oct-2023.md)
-* [Discord Community](community/discord-community.md)
 * [Discussion Forum](community/discussion-forum.md)
 
 ## HELP
 
 * [FAQs](help/faqs.md)
-* [Glossary](help/glossary.md)
