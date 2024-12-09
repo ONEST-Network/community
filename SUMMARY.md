@@ -58,7 +58,6 @@
 
 ## Community
 
-* [ONEST Protocol Specifications Working Group](community/onest-protocol-specifications-working-group.md)
 * [Contribution Guide](community/contribution-guide.md)
 * [Discussion Forum](community/discussion-forum.md)
 
