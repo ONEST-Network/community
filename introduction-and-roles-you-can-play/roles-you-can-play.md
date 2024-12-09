@@ -10,6 +10,6 @@ An entity can play various roles on ONEST, the primary roles are
 \
 **Seeker**: If you’d like to consume the information made available by the ONEST network through any of the seeker platforms, you can join as a seeker. \
 \
-**Network Service Provider**: If you choose to enable other organizations to join this network through your technology, business or onboarding services, this role will suit you the best.\
+**Technology Service Provider**: If you choose to enable other organizations to join this network through your technology, business or onboarding services, this role will suit you the best.\
 \
 You have the flexibility to choose one of the aforementioned roles or even assume more than one role within the network, enabling you to actively engage in and benefit from the diverse opportunities provided by the network.
