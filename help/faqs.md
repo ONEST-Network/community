@@ -2,7 +2,7 @@
 
 #### Who can join the network?&#x20;
 
-It is an open network. We welcome all stakeholders involved in the education and skilling sector, including individuals and organizations committed to advancing learning and livelihood opportunities, to join this dynamic network.
+It is an open network. We welcome all stakeholders involved in the employment and skilling sector, including individuals and organizations committed to advancing learning and livelihood opportunities, to join this dynamic network.
 
 #### How do I choose my role in the network?
 
