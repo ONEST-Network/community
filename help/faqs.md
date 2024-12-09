@@ -15,19 +15,19 @@ You have the flexibility to choose one of the aforementioned roles or even assum
 **Seeker Platform:** If you seek to explore the vast array of training, scholarships, jobs, and mentorship opportunities available within the network, we encourage you to join as a Seeker Platform.\
 **Seeker:** If you’d like to consume the information made available by the ONEST network through any of the seeker platforms, you can join as a seeker.&#x20;
 
-**Network Service Provider:** If you choose to enable other organizations to join this network through your technology, business or onboarding services, this role will suit you the best.
+**Technology Service Provider:** If you choose to enable other organizations to join this network through your technology, business or onboarding services, this role will suit you the best.
 
 #### Who will benefit from ONEST?&#x20;
 
-ONEST is a multi-dimensional ecosystem touching all the aspects of education, skilling, and employment in India. It will promote and facilitate synergies and public-private partnerships enabling a holistic human development ecosystem.
+ONEST is a multi-dimensional ecosystem touching all the aspects of skilling, and employment in India. It will promote and facilitate synergies and public-private partnerships enabling a holistic human development ecosystem.
 
 #### Is it possible to join the network without any technological expertise or know how?
 
-Ofcourse, we have several Network Service Providers who can help you join the network. Drop an email to hello@onest.network to find out more information about this.
+Ofcourse, we have several Technology Service Providers who can help you join the network.&#x20;
 
-#### What are the network policies for ONEST?&#x20;
+####
 
-They are being drafted at the moment simultaneously as the ecosystem starts integrating with the network.\
+\
 \
 
 
