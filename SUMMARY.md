@@ -42,7 +42,7 @@
   * [Work Opportunities (DSEP 2.0)](learn/reference-implementation-guides/work-opportunities.md)
   * [Suggested Form Structure for xInput (DSEP 1.0)](learn/reference-implementation-guides/suggested-form-structure-for-xinput.md)
 * [Understanding the APIs](learn/understanding-the-apis.md)
-* [Developing the APIs](learn/developing-the-apis/README.md)
+* [Developing the APIs](learn/developing-the-apis.md)
   * [Work Opportunities (DSEP 2.0)](learn/developing-the-apis/work-opportunities-dsep-2.0.md)
 * [Integration of Adaptors](learn/integration-of-adaptors/README.md)
   * [Protocol Server](learn/integration-of-adaptors/beckn-protocol-server/README.md)
