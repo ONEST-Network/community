@@ -12,6 +12,6 @@ layout:
     visible: true
 ---
 
-# Onboarding
+# Onboarding journey
 
 Begin your onboarding journey by clicking  [https://open.gitbook.com/\~space/Ueh97yUZJPuZlVNqCnvq/\~gitbook/pdf?back=false\&page=IezH4yyKOhbbQ2VQkmSP](https://open.gitbook.com/~space/Ueh97yUZJPuZlVNqCnvq/~gitbook/pdf?back=false\&page=IezH4yyKOhbbQ2VQkmSP)
