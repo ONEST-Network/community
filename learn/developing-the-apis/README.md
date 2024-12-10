@@ -14,9 +14,9 @@ layout:
 
 # Developing the APIs
 
-### Protocol APIs
+**Skilling Experience (DSEP 1.0) and Financial Support (DSEP 2.0)**
 
-Following are the APIs to be developed by BAP and BPP:
+Following are the APIs to be developed by BAP and BPP for the above two domains
 
 **BAP**
 
@@ -46,11 +46,11 @@ BPP should consume the following action APIs and trigger on\_action APIs.
 
 ### Steps to create a Request:
 
-<figure><img src="../.gitbook/assets/onest api flow.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/onest api flow.jpeg" alt=""><figcaption></figcaption></figure>
 
 1. All the action and on\_action APIs have `context` and `message` objects. Refer to this [link](https://developers.becknprotocol.io/docs/core-specification/schema-reference/context/) to understand the list of properties in the context object.\
    \
-   Message object varies based on the API, refer [reference-implementation-guides](reference-implementation-guides/ "mention") for examples. Below is the sample API request with context and message objects.
+   Message object varies based on the API, refer [reference-implementation-guides](../reference-implementation-guides/ "mention") for examples. Below is the sample API request with context and message objects.
 
 ```
 {
@@ -84,7 +84,7 @@ BPP should consume the following action APIs and trigger on\_action APIs.
 
 ### **Note:**
 
-[beckn-protocol-server](integration-of-adaptors/beckn-protocol-server/ "mention") is a reference application, which helps the participants to quickly develop the protocol APIs. It will help in signing and verification of payload signature, schema validation, sending and receiving requests to Gateway and Participants.
+[beckn-protocol-server](../integration-of-adaptors/beckn-protocol-server/ "mention") is a reference application, which helps the participants to quickly develop the protocol APIs. It will help in signing and verification of payload signature, schema validation, sending and receiving requests to Gateway and Participants.
 
 It is not mandatory to use the protocol server; you can build your own network adaptors to connect to the ONEST network.
 
