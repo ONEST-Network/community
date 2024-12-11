@@ -12,6 +12,8 @@ layout:
     visible: true
 ---
 
-# Onboarding journey
+# Join the network
 
-Begin your onboarding journey by clicking  [https://open.gitbook.com/\~space/Ueh97yUZJPuZlVNqCnvq/\~gitbook/pdf?back=false\&page=IezH4yyKOhbbQ2VQkmSP](https://open.gitbook.com/~space/Ueh97yUZJPuZlVNqCnvq/~gitbook/pdf?back=false\&page=IezH4yyKOhbbQ2VQkmSP)
+Begin your onboarding journey by clicking &#x20;
+
+[https://portal.ondc.org](https://portal.ondc.org/)
