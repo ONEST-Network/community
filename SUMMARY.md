@@ -4,7 +4,7 @@
   * [ONEST- Focus Areas](introduction-and-roles-you-can-play/onest-focus-areas.md)
   * [Core Principles](introduction-and-roles-you-can-play/core-principles.md)
   * [Roles You Can Play](introduction-and-roles-you-can-play/roles-you-can-play.md)
-* [Onboarding journey](onboarding-sandbox-registration/README.md)
+* [Join the network](onboarding-sandbox-registration/README.md)
 * [Network Observability](network-observability/README.md)
   * [Introduction](network-observability/introduction.md)
   * [Telemetry Implementation](network-observability/how-to-generate-and-send-telemetry-to-onest-obsrv.md)
