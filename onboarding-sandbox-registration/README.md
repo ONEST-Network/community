@@ -14,6 +14,5 @@ layout:
 
 # Join the network
 
-Begin your onboarding journey by clicking &#x20;
+Begin your onboarding journey by clicking [https://portal.ondc.org](https://portal.ondc.org/)
 
-[https://portal.ondc.org](https://portal.ondc.org/)
