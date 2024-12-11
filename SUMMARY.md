@@ -8,7 +8,7 @@
 * [Network Observability](network-observability/README.md)
   * [Introduction](network-observability/introduction.md)
   * [Telemetry Implementation](network-observability/how-to-generate-and-send-telemetry-to-onest-obsrv.md)
-  * [Dashboard Details](network-observability/dashboard-details.md)
+  * [Transaction Dashboard](network-observability/dashboard-details.md)
 
 ## Learn
 
