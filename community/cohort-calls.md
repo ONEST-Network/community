@@ -9,13 +9,13 @@ description: >-
 
 
 
-### ONDC Registry Onboarding (Subscribe API) Walkthrough
+#### ONDC Registry Onboarding (Subscribe API) Walkthrough
 
 Schedule: Every Thursday, 10:00 – 10:45am&#x20;
 
 Video call link: https://meet.google.com/qjs-xupv-zdk
 
-### Tech Briefing&#x20;
+#### Tech Briefing&#x20;
 
 Schedule: Every Friday, 11:00am – 12:00pm
 
