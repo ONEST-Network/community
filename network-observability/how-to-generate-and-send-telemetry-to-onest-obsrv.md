@@ -33,7 +33,7 @@ telemetry:
 
 The protocol server will generate telemetry events and send them in batches of 100 or every 5 minutes to ONEST Obsrv.
 
-**Note:** For TELEMETRY\_SERVER\_URL, please reach out to ONEST team.
+**Note:** Configure the telemetry URL to "[https://data.onest.network/data/v1/in/onest-telemetry-testing](https://data.onest.network/data/v1/in/onest-telemetry-testing)" for lower environments such as dev, staging, and preprod during testing. For the production telemetry URL, contact the ONEST team when the application is ready for go-live
 
 ### 2. Using the Open Network Telemetry SDK
 
