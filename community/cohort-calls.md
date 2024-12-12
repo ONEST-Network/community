@@ -1,13 +1,6 @@
----
-description: >-
-  Recurring sessions are organized for Network Participants to provide guidance
-  on registering on the ONDC portal and to offer technical briefings for
-  seamless integration.
----
-
 # Cohort calls
 
-
+Recurring sessions are organized for Network Participants to provide guidance on registering on the ONDC portal and to offer technical briefings for seamless integration.
 
 #### ONDC Registry Onboarding (Subscribe API) Walkthrough
 
