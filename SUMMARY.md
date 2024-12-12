@@ -59,6 +59,7 @@
 * [Contribution Guide](community/contribution-guide.md)
 * [Discussion Forum](community/discussion-forum.md)
 * [Cohort calls](community/cohort-calls.md)
+* [Issues Board](community/issues-board.md)
 
 ## HELP
 
