@@ -13,7 +13,7 @@ description: >-
 
 Schedule: Every Thursday, 10:00 – 10:45am&#x20;
 
-Video call link: https://meet.google.com/qjs-xupv-zdk
+Video call link: [https://meet.google.com/qjs-xupv-zdk](https://meet.google.com/qjs-xupv-zdk)
 
 #### Tech Briefing&#x20;
 
