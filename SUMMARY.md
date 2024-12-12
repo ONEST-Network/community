@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction & Roles you can play](README.md)
+* [Introduction](README.md)
   * [ONEST- Focus Areas](introduction-and-roles-you-can-play/onest-focus-areas.md)
   * [Core Principles](introduction-and-roles-you-can-play/core-principles.md)
   * [Roles You Can Play](introduction-and-roles-you-can-play/roles-you-can-play.md)
