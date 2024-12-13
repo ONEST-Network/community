@@ -1,6 +1,6 @@
 # Introduction & Features
 
-Protocol Server is a service that helps the application connect to ONEST Network. It follows the [Beckn Protocol](https://beckn.network/protocol) and makes it more accessible for the applications to get started quickly. Any network participant can run this server and connect to ONEST Network.
+Protocol Server is a service that helps the application connect to ONEST Network. It follows the [Beckn Protocol](https://beckn.network/protocol) and makes it more accessible for the applications to get started quickly. Any network participant can run this server and connect to ONEST Network. This applies only when working with DSEP 1.0 across any domain
 
 ## Features
 
