@@ -13,3 +13,5 @@ The observability infrastructure within ONEST is designed to offer the following
 * Query the processed data via multiple modes: query API, dashboards (pre-created & ability to create new), and download the ingested data as files from cloud storage
 
 The observability infrastructure and services will be accessible to all network participants, allowing them to harness these resources for various purposes, in accordance with the policies set forth by the ONEST network
+
+Note: This observability infrastructure & its services are applicable only when working with DSEP 1.0.

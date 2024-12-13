@@ -1,6 +1,6 @@
 # Telemetry Implementation
 
-Following are the 3 ways to generate and send the telemetry events
+Following are the 3 ways to generate and send telemetry events. However note that this is applicable only when operating on DSEP 1.0
 
 ### 1. Using the Protocol Server
 
@@ -89,7 +89,7 @@ curl --location '{TELEMETRY_SERVER_URL}' \
                                 {
                                     "key": "domain",
                                     "value": {
-                                        "stringValue": "onest:financial-support"
+                                        "stringValue": "ONDC:ONEST12"
                                     }
                                 }
                             ]
@@ -291,7 +291,7 @@ curl --location '{TELEMETRY_SERVER_URL}' \
                         {
                             "key": "domain",
                             "value": {
-                                "stringValue": "onest:financial-support"
+                                "stringValue": "ONDC:ONEST12"
                             }
                         }
                     ]
@@ -433,7 +433,7 @@ curl --location '{TELEMETRY_SERVER_URL}' \
                         {
                             "key": "domain",
                             "value": {
-                                "stringValue": "onest:financial-support"
+                                "stringValue": "ONDC:ONEST12"
                             }
                         }
                     ]
