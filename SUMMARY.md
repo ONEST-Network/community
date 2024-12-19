@@ -44,6 +44,7 @@
 * [Understanding the APIs](learn/understanding-the-apis.md)
 * [Developing the APIs](learn/developing-the-apis.md)
   * [Work Opportunities (DSEP 2.0)](learn/developing-the-apis/work-opportunities-dsep-2.0.md)
+  * [Financial support, Skilling (DSEP 1.0)](learn/developing-the-apis/financial-support-skilling-dsep-1.0.md)
 * [Integration of Adaptors](learn/integration-of-adaptors/README.md)
   * [Protocol Server](learn/integration-of-adaptors/beckn-protocol-server/README.md)
     * [Introduction & Features](learn/integration-of-adaptors/beckn-protocol-server/introduction-and-features.md)
