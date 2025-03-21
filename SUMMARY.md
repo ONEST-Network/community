@@ -54,6 +54,9 @@
     * [Generate Keys](learn/integration-of-adaptors/beckn-protocol-server/generate-keys.md)
     * [Local Tunnelling and Nginx Setup](learn/integration-of-adaptors/beckn-protocol-server/local-tunnelling-and-nginx-setup.md)
     * [FAQs](learn/integration-of-adaptors/beckn-protocol-server/faqs.md)
+  * [Job Manager](learn/integration-of-adaptors/job-manager.md)
+  * [Profile Manager](learn/integration-of-adaptors/profile-manager.md)
+  * [AI Matching Engine](learn/integration-of-adaptors/ai-matching-engine.md)
 
 ## Community
 
