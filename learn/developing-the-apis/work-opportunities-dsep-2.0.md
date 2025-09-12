@@ -1,5 +1,5 @@
 ---
-description: https://ondc-official.github.io/ONDC-ONEST-Specifications/#/
+description: https://github.com/ONEST-Network/ONEST-Specification-v2
 ---
 
 # Work Opportunities (DSEP 2.0)
