@@ -2,4 +2,4 @@
 
 
 
-Link to forum: [https://github.com/ONDC-Official/ONDC-ONEST-Specifications/discussions](https://github.com/ONDC-Official/ONDC-ONEST-Specifications/discussions)
+Join our [Discord](https://discord.gg/kHNW46Tp) for any help or queries
