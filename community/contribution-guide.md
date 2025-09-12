@@ -1,3 +1,3 @@
 # Contribution Guide
 
-Link to Contribution Board: [https://github.com/ONDC-Official/ONDC-ONEST-Specifications/pulls](https://github.com/ONDC-Official/ONDC-ONEST-Specifications/pulls)
+Link to Contribution Board: [https://github.com/ONEST-Network/ONEST-Specification-v2/pulls](https://github.com/ONEST-Network/ONEST-Specification-v2/pulls)
